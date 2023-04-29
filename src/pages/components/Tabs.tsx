@@ -2,7 +2,8 @@ import * as React from 'react';
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import Box from '@mui/material/Box';
-import DescriptionFactory from '../content/linkedList/index';
+import DescriptionFactory from './DescriptionFactory';
+import VisualizationFactory from './VisualizationFactory';
 
 interface TabPanelProps {
   children?: React.ReactNode;
@@ -57,7 +58,7 @@ export default function BasicTabs() {
         <DescriptionFactory />
       </TabPanel>
       <TabPanel value={value} index={1}>
-        Item Two
+        <VisualizationFactory />
       </TabPanel>
       <TabPanel value={value} index={2}>
         Item Three

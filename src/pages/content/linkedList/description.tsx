@@ -1,6 +1,5 @@
-const Description = () => (
+const LinkedListDescription = () => (
   <>
-    <h4>Summary</h4>
     <p>
       A linked list is like a train, where each box is connected to the next box with a string. Each box has something special inside, like toys or candy. The first box is called the "head" and the last box is called the "tail." To get to a specific box, we follow the strings from the head until we reach the right box.
     </p>
@@ -40,4 +39,4 @@ const Description = () => (
   </>
 )
 
-export default Description;
+export default LinkedListDescription;
