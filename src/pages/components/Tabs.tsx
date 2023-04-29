@@ -3,7 +3,7 @@ import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import Box from '@mui/material/Box';
 import DescriptionFactory from './DescriptionFactory';
-import VisualizationFactory from './VisualizationFactory';
+import VisualizationFactory from './Visualization/VisualizationFactory';
 
 interface TabPanelProps {
   children?: React.ReactNode;
