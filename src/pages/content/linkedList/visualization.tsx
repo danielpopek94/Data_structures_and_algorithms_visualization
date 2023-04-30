@@ -2,25 +2,29 @@ export const LinkedListVisualization = [
     {
         index: 0,
         color: 'red',
+        text: 'Świnia',
         pointer: true,
-        text: 'Świnia'
+        pointed: false,
+
     },
     {
         index: 1,
         color: 'blue',
+        text: 'Kura',
         pointer: true,
-        text: 'Kura'
+        pointed: false,
     },
     {
         index: 2,
         color: 'green',
         pointer: true,
-        text: 'Krowa'
+        pointed: false,
     },
     {
         index: 3,
         color: 'pink',
+        text: 'Zając',
         pointer: false,
-        text: 'Zając'
+        pointed: false,
     }
 ]
