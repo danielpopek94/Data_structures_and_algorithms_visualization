@@ -1,9 +1,9 @@
-import MainRactangle from "@/pages/utilities/Visualization/MainRactangle";
+import MainRectangle from "@/pages/utilities/Visualization/MainRectangle";
 import Pointer from "@/pages/utilities/Visualization/Pointer";
 import InnerText from "@/pages/utilities/Visualization/InnerText";
 import Arrow from "@/pages/utilities/Visualization/Arrow";
 
-const Ractangle = ({ nodesCount, nodeIndex, color, text, pointer }) => {
+const Rectangle = ({ nodesCount, nodeIndex, color, text, pointer }) => {
     const marginTop = 20;
     const gap = 10;
     const width = (100 - gap * nodesCount) / nodesCount;
@@ -12,7 +12,7 @@ const Ractangle = ({ nodesCount, nodeIndex, color, text, pointer }) => {
 
     return (
         <g>
-            <MainRactangle
+            <MainRectangle
                 x={currentPosition}
                 y={marginTop}
                 width={width}
@@ -33,16 +33,16 @@ const Ractangle = ({ nodesCount, nodeIndex, color, text, pointer }) => {
                 text={text}
             />
             {pointer &&
-            <Arrow
-                x1={currentPosition + width + gap - 1.5}
-                y1={marginTop + height / 2}
-                x2={currentPosition + width - 1.5}
-                y2={marginTop + height / 2}
-            />
+                <Arrow
+                    x1={currentPosition + width + gap - 1.5}
+                    y1={marginTop + height / 2}
+                    x2={currentPosition + width - 1.5}
+                    y2={marginTop + height / 2}
+                />
             }
 
         </g>
     )
 };
 
-export default Ractangle;
+export default Rectangle;
