@@ -1,15 +1,16 @@
 import React, { useEffect, useRef } from "react";
 import * as d3 from "d3";
 
-const InnerText = ({ x, width, height, text }) => {
+const InnerText = ({ x, y, width, height, text }) => {
     const ref = useRef();
 
     useEffect(() => {
         const svg = d3.select(ref.current);
+        svg.selectAll('text').remove();
 
         svg.append("text")
             .attr("x", x + 1)
-            .attr("y", height * 0.5)
+            .attr("y", y + height * 0.5)
             .attr("text-anchor", "start")
             .attr("dominant-baseline", "central")
             .attr("font-size", `${width / 6}px`)

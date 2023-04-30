@@ -8,19 +8,19 @@ export const LinkedListVisualization = [
     {
         index: 1,
         color: 'blue',
-        pointer: false,
+        pointer: true,
         text: 'Kura'
     },
     {
         index: 2,
         color: 'green',
-        pointer: false,
+        pointer: true,
         text: 'Krowa'
     },
-    // {
-    //     index: 3,
-    //     color: 'pink',
-    //     pointer: false,
-    //     text: 'Zając'
-    // }
+    {
+        index: 3,
+        color: 'pink',
+        pointer: false,
+        text: 'Zając'
+    }
 ]

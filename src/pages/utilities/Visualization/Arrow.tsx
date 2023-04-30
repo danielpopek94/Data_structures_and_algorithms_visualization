@@ -1,19 +1,60 @@
 import React, { useEffect, useRef } from "react";
 import * as d3 from "d3";
 
-const Arrow = ({ width, height, steps }) => {
+const Arrow = ({ x1, y1, x2, y2 }) => {
     const ref = useRef();
 
     useEffect(() => {
         const svg = d3.select(ref.current);
+        svg.selectAll('path').remove();
 
-        svg.append("path")
-            .attr("d", "M21.883 12l-7.527 6.235.644.765 9-7.521-9-7.479-.645.764 7.529 6.236h-21.884v1h21.883z")
-            .attr("fill", "black")
-            .attr("transform", `translate(${width - 2}, ${-height / steps}) scale(.4)`);
-    }, [width]);
+        const line = d3
+            .line()
+            .x((d) => d[0])
+            .y((d) => d[1]);
 
-    return <g ref={ref}></g>;
+        svg
+            .append("path")
+            .attr("d", line([[x2, y2], [x1, y1]]))
+            .attr("stroke", "black")
+            .attr("stroke-width", 0.5)
+            .attr("fill", "none")
+            .attr("marker-start", "url(#dot)")
+            .attr("marker-end", "url(#arrow)");
+    }, [x1, y1, x2, y2]);
+
+    return (
+        <>
+            < g ref={ref} ></g >
+            <defs>
+                <marker
+                    id="arrow"
+                    viewBox="0 0 10 10"
+                    refX="5"
+                    refY="5"
+                    markerWidth="6"
+                    markerHeight="6"
+                    orient="auto-start-reverse"
+                >
+                    <path d="M0 0L10 5L0 10z" fill="black" />
+                </marker>
+            </defs>
+            <defs>
+                <marker
+                    id="dot"
+                    viewBox="0 0 10 10"
+                    refX="5"
+                    refY="5"
+                    markerWidth="6"
+                    markerHeight="6"
+                    orient="auto-start-reverse"
+                >
+                    <circle cx="5" cy="5" r="2" fill="black" />
+                </marker>
+            </defs>
+
+        </>
+    );
 };
 
 export default Arrow;

@@ -5,7 +5,9 @@ const MainRactangle = ({ x, y, width, height, color }) => {
     const ref = useRef();
 
     useEffect(() => {
+
         const svg = d3.select(ref.current);
+        svg.selectAll('rect').remove();
 
         svg.append("rect")
             .attr("x", x)
@@ -13,6 +15,8 @@ const MainRactangle = ({ x, y, width, height, color }) => {
             .attr("width", width)
             .attr("height", height)
             .attr("fill", color);
+
+
     }, [x, y, width, height, color]);
 
     return <g ref={ref}></g>;
