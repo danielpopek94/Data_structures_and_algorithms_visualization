@@ -17,6 +17,7 @@ export const LinkedListVisualization = [
     {
         index: 2,
         color: 'green',
+        text: 'Krowa',
         pointer: true,
         pointed: false,
     },

@@ -16,7 +16,7 @@ const InnerText = ({ x, y, width, height, text }) => {
             .attr("font-size", `${width / 6}px`)
             .attr("fill", "white")
             .text(text);
-    }, [width]);
+    }, [x, y, width, height, text]);
 
     return <g ref={ref}></g>;
 };
