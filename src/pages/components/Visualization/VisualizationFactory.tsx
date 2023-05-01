@@ -1,11 +1,9 @@
-import { LinkedListVisualization } from "../../content/linkedList/visualization";
 import React, { useRef } from "react";
 import Rectangle from "./RectanglesFactory";
 
-const VisualizationFactory = () => {
+const VisualizationFactory = ({ nodes }) => {
     const ref = useRef();
 
-    const nodes = LinkedListVisualization;
     return (
         <div>
             <svg ref={ref} width="100%" height="100%" viewBox="0 0 100 100">
