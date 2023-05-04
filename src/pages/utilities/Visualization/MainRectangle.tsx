@@ -14,7 +14,9 @@ const MainRectangle = ({ x, y, width, height, color }) => {
             .attr("y", y)
             .attr("width", width)
             .attr("height", height)
-            .attr("fill", color);
+            .attr("fill", color)
+            .attr("rx", 1)
+            .attr("ry", 1);
 
 
     }, [x, y, width, height, color]);

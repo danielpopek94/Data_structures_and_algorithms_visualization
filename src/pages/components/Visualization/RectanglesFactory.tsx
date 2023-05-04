@@ -2,8 +2,9 @@ import MainRectangle from "@/pages/utilities/Visualization/MainRectangle";
 import Pointer from "@/pages/utilities/Visualization/Pointer";
 import InnerText from "@/pages/utilities/Visualization/InnerText";
 import Arrow from "@/pages/utilities/Visualization/Arrow";
+import InnerBorder from "./InnerBorder";
 
-const Rectangle = ({ nodesCount, nodeIndex, color, text, pointer, pointed }) => {
+const Rectangle = ({ nodesCount, nodeIndex, color, text, pointer, pointed, innerBorder }) => {
     const marginTop = 20;
     const gap = 10;
     const width = (100 - gap * nodesCount) / nodesCount;
@@ -39,6 +40,14 @@ const Rectangle = ({ nodesCount, nodeIndex, color, text, pointer, pointed }) => 
                     y1={marginTop + height / 2}
                     x2={currentPosition + width - 1.5}
                     y2={marginTop + height / 2}
+                />
+            }
+            {innerBorder &&
+                <InnerBorder
+                    x={currentPosition}
+                    y={marginTop}
+                    width={width}
+                    height={height}
                 />
             }
 

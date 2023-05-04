@@ -7,7 +7,8 @@ const CommentLabel = ({ comment }) => {
     useEffect(() => {
         const svg = d3.select(ref.current);
 
-        svg.selectAll('text, rect').remove();
+        svg.selectAll('text').remove();
+        svg.selectAll('rect').remove();
 
         const text = svg.append("text")
             .attr("x", 6)
@@ -31,7 +32,6 @@ const CommentLabel = ({ comment }) => {
             .attr("stroke-width", 0.5)
             .attr("rx", 5)
             .attr("ry", 20);
-        console.log(textBox);
     }, []);
 
     return <g ref={ref}></g>;

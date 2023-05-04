@@ -9,9 +9,9 @@ const InnerText = ({ x, y, width, height, text }) => {
         svg.selectAll('text').remove();
 
         svg.append("text")
-            .attr("x", x + 1)
+            .attr("x", x + 9)
             .attr("y", y + height * 0.5)
-            .attr("text-anchor", "start")
+            .attr("text-anchor", "middle")
             .attr("dominant-baseline", "central")
             .attr("font-size", `${width / 6}px`)
             .attr("fill", "white")

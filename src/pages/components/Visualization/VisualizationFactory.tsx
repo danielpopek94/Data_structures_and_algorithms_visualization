@@ -18,6 +18,7 @@ const VisualizationFactory = ({ nodes, comment }) => {
                         key={e.index}
                         pointer={e.pointer}
                         pointed={e.pointed}
+                        innerBorder={e.innerBorder}
                     />
                 ))}
                 </g>
