@@ -3,7 +3,7 @@ import Pointer from "@/pages/utilities/Visualization/Pointer";
 import InnerText from "@/pages/utilities/Visualization/InnerText";
 import Arrow from "@/pages/utilities/Visualization/Arrow";
 
-const Rectangle = ({ nodesCount, nodeIndex, color, text, pointer }) => {
+const Rectangle = ({ nodesCount, nodeIndex, color, text, pointer, pointed }) => {
     const marginTop = 20;
     const gap = 10;
     const width = (100 - gap * nodesCount) / nodesCount;
@@ -24,6 +24,7 @@ const Rectangle = ({ nodesCount, nodeIndex, color, text, pointer }) => {
                 y={marginTop}
                 width={width}
                 height={height}
+                pointed={pointed}
             />
             <InnerText
                 x={currentPosition}

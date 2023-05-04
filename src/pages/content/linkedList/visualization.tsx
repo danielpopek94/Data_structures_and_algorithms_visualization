@@ -1,64 +1,58 @@
 export const LinkedListVisualization = [
     {
         id: 0,
-        descriptions: `lorem impsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et`,
+        description: `"Lists" are one type of data structure, and can store multiple values.`,
         nodes: [
             {
                 index: 0,
-                color: 'red',
-                text: 'Świnia',
+                color: 'blue',
+                text: 'Blue',
                 pointer: true,
                 pointed: false,
 
             },
             {
                 index: 1,
-                color: 'blue',
-                text: 'Kura',
+                color: 'orange',
+                text: 'Orange',
                 pointer: true,
                 pointed: false,
             },
             {
                 index: 2,
-                color: 'green',
-                text: 'Krowa',
-                pointer: true,
-                pointed: false,
-            },
-            {
-                index: 3,
-                color: 'pink',
-                text: 'Zając',
+                color: 'red',
+                text: 'Red',
                 pointer: false,
                 pointed: false,
-            }
+            },
         ]
     },
     {
         id: 1,
-        descriptions: `lorem impsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et`,
+        description: `They are unique in how they pair data with "pointers", the pointers indicating the next piece of data's memory location.`,
+        comment: 'Pointer',
         nodes: [
             {
                 index: 0,
-                color: 'pink',
-                text: 'Świnia2',
+                color: 'blue',
+                text: 'Blue',
                 pointer: true,
-                pointed: false,
+                pointed: true,
 
             },
             {
                 index: 1,
-                color: 'green',
-                text: 'Kura2',
+                color: 'orange',
+                text: 'Orange',
                 pointer: true,
-                pointed: false,
+                pointed: true,
             },
             {
                 index: 2,
-                color: 'blue',
-                text: 'Krowa2',
+                color: 'red',
+                text: 'Red',
                 pointer: false,
-                pointed: false,
+                pointed: true,
             },
         ]
     },

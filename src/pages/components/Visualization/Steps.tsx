@@ -4,6 +4,7 @@ import MobileStepper from '@mui/material/MobileStepper';
 import Button from '@mui/material/Button';
 import VisualizationFactory from './VisualizationFactory';
 import { LinkedListVisualization } from '@/pages/content/linkedList/visualization';
+import { Typography } from '@mui/material';
 
 const steps = LinkedListVisualization;
 
@@ -24,12 +25,13 @@ export default function Steps() {
     return (
         <Box>
             <Box>
-                <VisualizationFactory nodes={currentStep.nodes} />
+                <VisualizationFactory nodes={currentStep.nodes} comment={currentStep.comment} />
             </Box>
+            <Typography>{currentStep.description}</Typography>
             <MobileStepper
                 variant="text"
                 steps={maxSteps}
-                position="static"
+                position="bottom"
                 activeStep={activeStep}
                 nextButton={
                     <Button size="small" onClick={handleNext} disabled={activeStep === maxSteps - 1}>
@@ -38,7 +40,7 @@ export default function Steps() {
                 }
                 backButton={
                     <Button size="small" onClick={handleBack} disabled={activeStep === 0}>
-                        Back
+                        Previous
                     </Button>
                 }
             />
