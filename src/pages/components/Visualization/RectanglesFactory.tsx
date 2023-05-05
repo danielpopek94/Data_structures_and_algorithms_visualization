@@ -5,7 +5,7 @@ import Arrow from "@/pages/utilities/Visualization/Arrow";
 import InnerBorder from "./InnerBorder";
 
 const Rectangle = ({
-    nodesCount,
+    nodeSize,
     nodeIndex,
     color,
     text,
@@ -16,7 +16,7 @@ const Rectangle = ({
     positionY = 1 }) => {
     let y = 20 + positionY;
     const gap = 10;
-    const width = (100 - gap * nodesCount) / nodesCount;
+    const width = (100 - gap * nodeSize) / nodeSize;
     const height = width / 2.5;
     const x = nodeIndex * (width + gap) + positionX;
 

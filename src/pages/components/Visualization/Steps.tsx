@@ -26,7 +26,7 @@ export default function Steps() {
         <Box>
             <Box>
                 <VisualizationFactory
-                    nodes={currentStep.nodes}
+                    nodesRows={currentStep.nodes}
                     comment={currentStep.comment}
                     addDataNode={currentStep.addDataNode}
                 />
