@@ -2,9 +2,8 @@ import React, { useRef } from "react";
 import Rectangle from "./RectanglesFactory";
 import CommentLabel from "./CommentLabel";
 
-const VisualizationFactory = ({ nodesRows, comment, addDataNode }) => {
+const VisualizationFactory = ({ nodesRows, comment, addDataNode, nodeSize = 3 }) => {
     const ref = useRef();
-    const nodeSize = Math.max(...nodesRows.map(e => e.length));
     return (
         <div className="flex justify-center">
             <svg ref={ref} style={{ maxWidth: '500px' }} viewBox="0 0 100 100">

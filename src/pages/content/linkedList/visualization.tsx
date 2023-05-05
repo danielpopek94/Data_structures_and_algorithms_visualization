@@ -68,22 +68,22 @@ export const LinkedListVisualization = [
                 arrow: true,
                 pointed: true,
 
-            },
-            {
+            }],
+            [{
                 index: 1,
                 color: 'orange',
                 text: 'Orange',
                 arrow: true,
                 pointed: true,
-            },
-            {
+            }],
+            [{
                 index: 2,
                 color: 'red',
                 text: 'Red',
                 arrow: false,
                 pointed: true,
-            },
-        ]]
+            }],
+        ]
     },
     {
         id: 3,
@@ -261,7 +261,8 @@ export const LinkedListVisualization = [
                 pointed: false,
                 innerBorder: true,
             },
-        ]]
+        ],
+        ]
     },
     {
         id: 9,
@@ -288,16 +289,19 @@ export const LinkedListVisualization = [
                 arrow: false,
                 pointed: false,
             },
-        ]],
-        addDataNode: {
-            index: 0,
-            color: 'green',
-            text: 'Green',
-            arrow: false,
-            pointed: false,
-            positionX: 18,
-            positionY: 20,
-        }
+        ],
+            [
+                {
+                    index: 0,
+                    color: 'green',
+                    text: 'Green',
+                    arrow: false,
+                    pointed: false,
+                    positionX: 18,
+                    positionY: 20,
+                }
+            ]
+        ]
     },
     {
         id: 10,
@@ -324,16 +328,18 @@ export const LinkedListVisualization = [
                 arrow: false,
                 pointed: false,
             },
-        ]],
-        addDataNode: {
-            index: 0,
-            color: 'green',
-            text: 'Green',
-            arrow: { x1: 40, y1: 31.5, x2: 0, y2: 0 },
-            pointed: false,
-            positionX: 18,
-            positionY: 20,
-        }
+        ],
+            [
+                {
+                    index: 0,
+                    color: 'green',
+                    text: 'Green',
+                    arrow: { x1: 40, y1: 31.5, x2: 0, y2: 0 },
+                    pointed: false,
+                    positionX: 18,
+                    positionY: 20,
+                }
+            ]]
     },
     {
         id: 11,
@@ -360,16 +366,20 @@ export const LinkedListVisualization = [
                 arrow: false,
                 pointed: false,
             },
-        ]],
-        addDataNode: {
-            index: 0,
-            color: 'green',
-            text: 'Green',
-            arrow: { x1: 40, y1: 31.5, x2: 0, y2: 0 },
-            pointed: false,
-            positionX: 18,
-            positionY: 20,
-        }
+        ],
+            [
+
+                {
+                    index: 0,
+                    color: 'green',
+                    text: 'Green',
+                    arrow: { x1: 40, y1: 31.5, x2: 0, y2: 0 },
+                    pointed: false,
+                    positionX: 18,
+                    positionY: 20,
+                }
+
+            ]]
     },
     {
         id: 12,
@@ -409,15 +419,6 @@ export const LinkedListVisualization = [
                     positionY: 20,
                 }
             ]
-        ],
-        addDataNode: {
-            index: 0,
-            color: 'green',
-            text: 'Green',
-            arrow: { x1: 40, y1: 31.5, x2: 0, y2: 0 },
-            pointed: false,
-            positionX: 18,
-            positionY: 20,
-        }
+        ]
     },
 ]

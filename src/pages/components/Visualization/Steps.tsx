@@ -29,6 +29,7 @@ export default function Steps() {
                     nodesRows={currentStep.nodes}
                     comment={currentStep.comment}
                     addDataNode={currentStep.addDataNode}
+                    nodeSize={currentStep.nodeSize}
                 />
             </Box>
             <Typography>{currentStep.description}</Typography>
