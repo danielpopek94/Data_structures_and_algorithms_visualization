@@ -2,7 +2,7 @@ import React, { useRef } from "react";
 import Rectangle from "./RectanglesFactory";
 import CommentLabel from "./CommentLabel";
 
-const VisualizationFactory = ({ nodes, comment }) => {
+const VisualizationFactory = ({ nodes, comment, addDataNode }) => {
     const ref = useRef();
 
     return (
@@ -16,12 +16,27 @@ const VisualizationFactory = ({ nodes, comment }) => {
                         color={e.color}
                         text={e.text}
                         key={e.index}
-                        pointer={e.pointer}
+                        arrow={e.arrow}
                         pointed={e.pointed}
                         innerBorder={e.innerBorder}
+                        positionX={e.positionX}
+                        positionY={e.positionY}
                     />
                 ))}
+                    {addDataNode && <Rectangle
+                        nodesCount={nodes.length}
+                        nodeIndex={addDataNode.index}
+                        color={addDataNode.color}
+                        text={addDataNode.text}
+                        key={addDataNode.index}
+                        arrow={addDataNode.arrow}
+                        pointed={addDataNode.pointed}
+                        innerBorder={addDataNode.innerBorder}
+                        positionX={addDataNode.positionX}
+                        positionY={addDataNode.positionY}
+                    />}
                 </g>
+
                 {comment && <CommentLabel comment={comment} />}
             </svg>
         </div>

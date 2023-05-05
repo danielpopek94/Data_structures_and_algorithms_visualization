@@ -32,7 +32,7 @@ const CommentLabel = ({ comment }) => {
             .attr("stroke-width", 0.5)
             .attr("rx", 5)
             .attr("ry", 20);
-    }, []);
+    }, [comment]);
 
     return <g ref={ref}></g>;
 };

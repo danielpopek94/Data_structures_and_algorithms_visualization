@@ -25,7 +25,11 @@ export default function Steps() {
     return (
         <Box>
             <Box>
-                <VisualizationFactory nodes={currentStep.nodes} comment={currentStep.comment} />
+                <VisualizationFactory
+                    nodes={currentStep.nodes}
+                    comment={currentStep.comment}
+                    addDataNode={currentStep.addDataNode}
+                />
             </Box>
             <Typography>{currentStep.description}</Typography>
             <MobileStepper
