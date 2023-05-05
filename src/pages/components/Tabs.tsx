@@ -4,6 +4,7 @@ import Tab from '@mui/material/Tab';
 import Box from '@mui/material/Box';
 import DescriptionFactory from './DescriptionFactory';
 import Steps from './Visualization/Steps';
+import CodeExampleFactory from './CodeExample/CodeExampleFactory';
 
 interface TabPanelProps {
   children?: React.ReactNode;
@@ -51,7 +52,7 @@ export default function BasicTabs() {
         <Tabs value={value} onChange={handleChange} aria-label="basic tabs example">
           <Tab label="Description" {...a11yProps(0)} />
           <Tab label="Visualization" {...a11yProps(1)} />
-          <Tab label="Code snipet" {...a11yProps(2)} />
+          <Tab label="Code example" {...a11yProps(2)} />
         </Tabs>
       </Box>
       <TabPanel value={value} index={0}>
@@ -61,7 +62,7 @@ export default function BasicTabs() {
         <Steps />
       </TabPanel>
       <TabPanel value={value} index={2}>
-        Item Three
+        <CodeExampleFactory />
       </TabPanel>
     </Box>
   );
