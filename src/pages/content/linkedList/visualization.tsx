@@ -9,6 +9,7 @@ export const LinkedListVisualization = [
                 text: 'Blue',
                 arrow: true,
                 pointed: false,
+                pointer: true,
 
             },
             {
@@ -17,6 +18,7 @@ export const LinkedListVisualization = [
                 text: 'Orange',
                 arrow: true,
                 pointed: false,
+                pointer: true,
             },
             {
                 index: 2,
@@ -24,6 +26,7 @@ export const LinkedListVisualization = [
                 text: 'Red',
                 arrow: false,
                 pointed: false,
+                pointer: true,
             },
         ]]
     },
@@ -38,7 +41,7 @@ export const LinkedListVisualization = [
                 text: 'Blue',
                 arrow: true,
                 pointed: true,
-
+                pointer: true,
             },
             {
                 index: 1,
@@ -46,6 +49,7 @@ export const LinkedListVisualization = [
                 text: 'Orange',
                 arrow: true,
                 pointed: true,
+                pointer: true,
             },
             {
                 index: 2,
@@ -53,57 +57,57 @@ export const LinkedListVisualization = [
                 text: 'Red',
                 arrow: false,
                 pointed: true,
+                pointer: true,
             },
         ]]
     },
     {
         id: 2,
-        description: `edit-me -In lists, data is stored in various disjointed locations in memory.`,
+        description: `In lists, data is stored in various disjointed locations in memory.`,
         comment: 'Memory',
         nodeSize: 3,
         orientation: 'column',
         nodes: [[
             {
                 index: 0,
-                color: 'blue',
-                text: 'Blue',
-                arrow: true,
-                pointed: true,
-            }],
-            [{
-                index: 1,
                 color: 'orange',
                 text: 'Orange',
-                arrow: true,
-            }],
-            [{
+                pointed: true,
+            },
+            {
+                index: 1,
+                color: 'blue',
+                text: 'Blue',
+            },
+            {
                 index: 2,
                 color: 'red',
                 text: 'Red',
                 arrow: false,
                 pointed: true,
-            }],
-        ]
+            }
+        ]]
     },
     {
         id: 3,
-        description: `edit me`,
+        description: `In lists, data is stored in various disjointed locations in memory.`,
         comment: 'Memory',
+        nodeSize: 3,
+        orientation: 'column',
         nodes: [[
             {
                 index: 0,
-                color: 'blue',
-                text: 'Blue',
-                arrow: true,
+                color: 'orange',
+                text: 'Orange',
+                arrow: { x1: 59, y1: 38, x2: 59, y2: 10 },
                 pointed: true,
-
             },
             {
                 index: 1,
-                color: 'orange',
-                text: 'Orange',
-                arrow: true,
-                pointed: true,
+                color: 'blue',
+                text: 'Blue',
+                arrow: { x1: 48, y1: 11.5, x2: 48, y2: 21 },
+                positionX: -10,
             },
             {
                 index: 2,
@@ -111,8 +115,9 @@ export const LinkedListVisualization = [
                 text: 'Red',
                 arrow: false,
                 pointed: true,
-            },
-        ]]
+            }
+        ],
+        ]
     },
     {
         id: 4,
@@ -125,6 +130,7 @@ export const LinkedListVisualization = [
                 text: 'Blue',
                 arrow: true,
                 pointed: false,
+                pointer: true,
                 innerBorder: true,
             },
             {
@@ -133,6 +139,7 @@ export const LinkedListVisualization = [
                 text: 'Orange',
                 arrow: true,
                 pointed: false,
+                pointer: true,
             },
             {
                 index: 2,
@@ -140,6 +147,7 @@ export const LinkedListVisualization = [
                 text: 'Red',
                 arrow: false,
                 pointed: false,
+                pointer: true,
             },
         ]]
     },
@@ -154,6 +162,7 @@ export const LinkedListVisualization = [
                 text: 'Blue',
                 arrow: true,
                 pointed: true,
+                pointer: true,
                 innerBorder: true,
             },
             {
@@ -162,6 +171,7 @@ export const LinkedListVisualization = [
                 text: 'Orange',
                 arrow: true,
                 pointed: false,
+                pointer: true,
             },
             {
                 index: 2,
@@ -169,6 +179,7 @@ export const LinkedListVisualization = [
                 text: 'Red',
                 arrow: false,
                 pointed: false,
+                pointer: true,
             },
         ]]
     },
@@ -183,6 +194,7 @@ export const LinkedListVisualization = [
                 text: 'Blue',
                 arrow: true,
                 pointed: true,
+                pointer: true,
                 innerBorder: true,
             },
             {
@@ -191,6 +203,7 @@ export const LinkedListVisualization = [
                 text: 'Orange',
                 arrow: true,
                 pointed: false,
+                pointer: true,
                 innerBorder: true,
             },
             {
@@ -198,6 +211,7 @@ export const LinkedListVisualization = [
                 color: 'red',
                 text: 'Red',
                 arrow: false,
+                pointer: true,
                 pointed: false,
             },
         ]]
@@ -213,6 +227,7 @@ export const LinkedListVisualization = [
                 text: 'Blue',
                 arrow: true,
                 pointed: true,
+                pointer: true,
                 innerBorder: true,
             },
             {
@@ -221,6 +236,7 @@ export const LinkedListVisualization = [
                 text: 'Orange',
                 arrow: true,
                 pointed: true,
+                pointer: true,
                 innerBorder: true,
             },
             {
@@ -229,6 +245,7 @@ export const LinkedListVisualization = [
                 text: 'Red',
                 arrow: false,
                 pointed: false,
+                pointer: true,
             },
         ]]
     },
@@ -243,6 +260,7 @@ export const LinkedListVisualization = [
                 text: 'Blue',
                 arrow: true,
                 pointed: true,
+                pointer: true,
                 innerBorder: true,
             },
             {
@@ -251,6 +269,7 @@ export const LinkedListVisualization = [
                 text: 'Orange',
                 arrow: true,
                 pointed: true,
+                pointer: true,
                 innerBorder: true,
             },
             {
@@ -259,6 +278,7 @@ export const LinkedListVisualization = [
                 text: 'Red',
                 arrow: false,
                 pointed: false,
+                pointer: true,
                 innerBorder: true,
             },
         ],
@@ -274,6 +294,7 @@ export const LinkedListVisualization = [
                 text: 'Blue',
                 arrow: true,
                 pointed: false,
+                pointer: true,
             },
             {
                 index: 1,
@@ -281,6 +302,7 @@ export const LinkedListVisualization = [
                 text: 'Orange',
                 arrow: true,
                 pointed: false,
+                pointer: true,
             },
             {
                 index: 2,
@@ -288,6 +310,7 @@ export const LinkedListVisualization = [
                 text: 'Red',
                 arrow: false,
                 pointed: false,
+                pointer: true,
             },
         ],
             [
@@ -297,6 +320,7 @@ export const LinkedListVisualization = [
                     text: 'Green',
                     arrow: false,
                     pointed: false,
+                    pointer: true,
                     positionX: 18,
                     positionY: 20,
                 }
@@ -313,6 +337,7 @@ export const LinkedListVisualization = [
                 text: 'Blue',
                 arrow: true,
                 pointed: false,
+                pointer: true,
             },
             {
                 index: 1,
@@ -320,6 +345,7 @@ export const LinkedListVisualization = [
                 text: 'Orange',
                 arrow: true,
                 pointed: false,
+                pointer: true,
             },
             {
                 index: 2,
@@ -327,6 +353,7 @@ export const LinkedListVisualization = [
                 text: 'Red',
                 arrow: false,
                 pointed: false,
+                pointer: true,
             },
         ],
             [
@@ -336,6 +363,7 @@ export const LinkedListVisualization = [
                     text: 'Green',
                     arrow: { x1: 40, y1: 31.5, x2: 0, y2: 0 },
                     pointed: false,
+                    pointer: true,
                     positionX: 18,
                     positionY: 20,
                 }
@@ -351,6 +379,7 @@ export const LinkedListVisualization = [
                 text: 'Blue',
                 arrow: { x1: 23, y1: 38.5, x2: 0, y2: 0 },
                 pointed: false,
+                pointer: true,
             },
             {
                 index: 1,
@@ -358,6 +387,7 @@ export const LinkedListVisualization = [
                 text: 'Orange',
                 arrow: true,
                 pointed: false,
+                pointer: true,
             },
             {
                 index: 2,
@@ -365,6 +395,7 @@ export const LinkedListVisualization = [
                 text: 'Red',
                 arrow: false,
                 pointed: false,
+                pointer: true,
             },
         ],
             [
@@ -375,6 +406,7 @@ export const LinkedListVisualization = [
                     text: 'Green',
                     arrow: { x1: 40, y1: 31.5, x2: 0, y2: 0 },
                     pointed: false,
+                    pointer: true,
                     positionX: 18,
                     positionY: 20,
                 }
@@ -392,6 +424,7 @@ export const LinkedListVisualization = [
                     text: 'Blue',
                     arrow: { x1: 23, y1: 38.5, x2: 0, y2: 0 },
                     pointed: false,
+                    pointer: true,
                 },
                 {
                     index: 1,
@@ -399,6 +432,7 @@ export const LinkedListVisualization = [
                     text: 'Orange',
                     arrow: true,
                     pointed: false,
+                    pointer: true,
                 },
                 {
                     index: 2,
@@ -406,6 +440,7 @@ export const LinkedListVisualization = [
                     text: 'Red',
                     arrow: false,
                     pointed: false,
+                    pointer: true,
                 },
             ],
             [
@@ -415,6 +450,7 @@ export const LinkedListVisualization = [
                     text: 'Green',
                     arrow: { x1: 40, y1: 31.5, x2: 0, y2: 0 },
                     pointed: false,
+                    pointer: true,
                     positionX: 18,
                     positionY: 20,
                 }

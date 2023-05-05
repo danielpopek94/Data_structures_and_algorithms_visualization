@@ -9,7 +9,7 @@ const Rectangle = ({
     nodeIndex,
     color,
     text,
-    arrow,
+    arrow = false,
     pointed,
     pointer,
     innerBorder,
@@ -39,8 +39,8 @@ const Rectangle = ({
         arrowPosition.y2 = arrow.y2 ? arrow.y2 : y + height / 2;
     }
     if (orientation === 'column') {
-        y = nodeIndex * (height + gap) + positionX;
-        x = 35 + positionY;
+        x = 35 + positionX;
+        y = nodeIndex * (height + gap) + positionY;
         pointer = false;
         pointed = false;
         innerTextX = x + 2;
