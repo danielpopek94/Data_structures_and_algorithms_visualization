@@ -28,8 +28,8 @@ export default function Steps() {
                 <VisualizationFactory
                     nodesRows={currentStep.nodes}
                     comment={currentStep.comment}
-                    addDataNode={currentStep.addDataNode}
                     nodeSize={currentStep.nodeSize}
+                    orientation={currentStep.orientation}
                 />
             </Box>
             <Typography>{currentStep.description}</Typography>

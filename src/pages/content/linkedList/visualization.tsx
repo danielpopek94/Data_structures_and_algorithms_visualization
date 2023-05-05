@@ -60,6 +60,8 @@ export const LinkedListVisualization = [
         id: 2,
         description: `edit-me -In lists, data is stored in various disjointed locations in memory.`,
         comment: 'Memory',
+        nodeSize: 3,
+        orientation: 'column',
         nodes: [[
             {
                 index: 0,
@@ -67,14 +69,12 @@ export const LinkedListVisualization = [
                 text: 'Blue',
                 arrow: true,
                 pointed: true,
-
             }],
             [{
                 index: 1,
                 color: 'orange',
                 text: 'Orange',
                 arrow: true,
-                pointed: true,
             }],
             [{
                 index: 2,

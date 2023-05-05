@@ -5,20 +5,51 @@ import Arrow from "@/pages/utilities/Visualization/Arrow";
 import InnerBorder from "./InnerBorder";
 
 const Rectangle = ({
-    nodeSize,
+    nodeSize = 3,
     nodeIndex,
     color,
     text,
     arrow,
     pointed,
+    pointer,
     innerBorder,
     positionX = 1,
-    positionY = 1 }) => {
-    let y = 20 + positionY;
+    positionY = 1,
+    orientation = 'row'
+}) => {
     const gap = 10;
     const width = (100 - gap * nodeSize) / nodeSize;
     const height = width / 2.5;
-    const x = nodeIndex * (width + gap) + positionX;
+    let x, y, innerTextX;
+    const arrowPosition = {
+        x1: 0,
+        y1: 0,
+        x2: 0,
+        y2: 0,
+    }
+
+    if (orientation === 'row') {
+        x = nodeIndex * (width + gap) + positionX;
+        y = 20 + positionY;
+        innerTextX = x;
+
+        arrowPosition.x1 = arrow.x1 ? arrow.x1 : x + width + gap - 1.5;
+        arrowPosition.y1 = arrow.y1 ? arrow.y1 : y + height / 2;
+        arrowPosition.x2 = arrow.x2 ? arrow.x2 : x + width - 1.5;
+        arrowPosition.y2 = arrow.y2 ? arrow.y2 : y + height / 2;
+    }
+    if (orientation === 'column') {
+        y = nodeIndex * (height + gap) + positionX;
+        x = 35 + positionY;
+        pointer = false;
+        pointed = false;
+        innerTextX = x + 2;
+
+        arrowPosition.x1 = arrow.x1 ? arrow.x1 : x + width / 2;
+        arrowPosition.y1 = arrow.y1 ? arrow.y1 : y + height + gap - 1.5;
+        arrowPosition.x2 = arrow.x2 ? arrow.x2 : x + width / 2;
+        arrowPosition.y2 = arrow.y2 ? arrow.y2 : y + height;
+    }
 
     return (
         <g>
@@ -29,15 +60,17 @@ const Rectangle = ({
                 height={height}
                 color={color}
             />
-            <Pointer
-                x={x}
-                y={y}
-                width={width}
-                height={height}
-                pointed={pointed}
-            />
+            {pointer &&
+                <Pointer
+                    x={x}
+                    y={y}
+                    width={width}
+                    height={height}
+                    pointed={pointed}
+                />
+            }
             <InnerText
-                x={x}
+                x={innerTextX}
                 y={y}
                 width={width}
                 height={height}
@@ -45,10 +78,10 @@ const Rectangle = ({
             />
             {arrow &&
                 <Arrow
-                x1={arrow.x1 ? arrow.x1 : x + width + gap - 1.5}
-                y1={arrow.y1 ? arrow.y1 : y + height / 2}
-                x2={arrow.x2 ? arrow.x2 : x + width - 1.5}
-                y2={arrow.y2 ? arrow.y2 : y + height / 2}
+                x1={arrowPosition.x1}
+                y1={arrowPosition.y1}
+                x2={arrowPosition.x2}
+                y2={arrowPosition.y2}
                 />
             }
             {innerBorder &&

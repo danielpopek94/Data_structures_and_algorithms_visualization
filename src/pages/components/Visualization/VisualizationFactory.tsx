@@ -2,7 +2,12 @@ import React, { useRef } from "react";
 import Rectangle from "./RectanglesFactory";
 import CommentLabel from "./CommentLabel";
 
-const VisualizationFactory = ({ nodesRows, comment, addDataNode, nodeSize = 3 }) => {
+const VisualizationFactory = ({
+    nodesRows,
+    comment,
+    nodeSize,
+    orientation,
+}) => {
     const ref = useRef();
     return (
         <div className="flex justify-center">
@@ -21,9 +26,11 @@ const VisualizationFactory = ({ nodesRows, comment, addDataNode, nodeSize = 3 })
                                             key={node.index}
                                             arrow={node.arrow}
                                             pointed={node.pointed}
+                                            pointer={node.pointer}
                                             innerBorder={node.innerBorder}
                                             positionX={node.positionX}
                                             positionY={node.positionY}
+                                            orientation={orientation}
                                         />
                                     ))
                                 }
