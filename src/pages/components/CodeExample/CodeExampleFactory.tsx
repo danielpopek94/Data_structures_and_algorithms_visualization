@@ -8,20 +8,20 @@ import linkedlistCode from '@/pages/content/linkedList/code';
 const CodeExampleFactory = () => {
 
     const currentCode = linkedlistCode;
-    const { codeJs, codePython } = currentCode;
+    const { python, js } = currentCode;
 
     const [selectedLanguage, setSelectedLanguage] = useState('JavaScript');
 
     const languageOptions = [
-        { value: codeJs, label: 'JavaScript' },
-        { value: codePython, label: 'Python' },
+        { value: js, label: 'JavaScript' },
+        { value: python, label: 'Python' },
     ];
 
     const handleLanguageChange = (selectedOption) => {
         setSelectedLanguage(selectedOption.label);
     };
 
-    const selectedCode = selectedLanguage === 'JavaScript' ? codeJs : codePython;
+    const selectedCode = selectedLanguage === 'JavaScript' ? js : python;
 
     return (
         <>

@@ -1,5 +1,5 @@
 const linkedlistCode = {
-    codeJs: `const list = {
+    js: `const list = {
         head: {
             value: 6
             next: {
@@ -15,7 +15,7 @@ const linkedlistCode = {
             }
         }
     };`,
-    codePython: `linked_list = {
+    python: `linked_list = {
         "head": {
             "value": 6,
             "next": {
