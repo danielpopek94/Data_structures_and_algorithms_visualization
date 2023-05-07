@@ -12,16 +12,16 @@ export default function Home() {
       <main className={`flex flex-row ${inter.className}`}>
         <nav className='w-1/6 px-2'>
           <ul>
-            <a href="#">
+            <a href="/linked-list">
               <li className='linked-list'>Linked list</li>
             </a>
-            <a href="#">
+            <a href="/array">
               <li className='array'>Array</li>
             </a>
-            <a href="#">
+            <a href="/stack">
               <li className='stack'>Stack</li>
             </a>
-            <a href="#">
+            <a href="/queue">
               <li className='queue'>Queue</li>
             </a>
           </ul>
