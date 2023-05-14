@@ -6,7 +6,11 @@ export default function getVisualizationSteps() {
     const router = useRouter();
     const path = router.query.path;
 
+    console.log(path);
+
     switch (path) {
+        case undefined:
+            return linkedListVisualization
         case "linked-list":
             return linkedListVisualization
         case "array":
@@ -15,6 +19,6 @@ export default function getVisualizationSteps() {
             return stackVisualization
         case "queue":
             return queueVisualization
-        default: console.error("Invalid route.");
+        default: linkedListVisualization;
     }
 }

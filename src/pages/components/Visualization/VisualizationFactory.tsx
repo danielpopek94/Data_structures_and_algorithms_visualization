@@ -13,9 +13,9 @@ const VisualizationFactory = ({
         <div className="flex justify-center">
             <svg ref={ref} style={{ maxWidth: '500px' }} viewBox="0 0 100 100">
                 <g transform="translate(0 25)">
-                    {nodesRows.map(nodes => {
+                    {nodesRows.map((nodes, outerIndex) => {
                         return (
-                            <>
+                            <React.Fragment key={outerIndex}>
                                 {
                                     nodes.map(node => (
                                         <Rectangle
@@ -34,7 +34,7 @@ const VisualizationFactory = ({
                                         />
                                     ))
                                 }
-                            </>
+                            </React.Fragment>
                         )
                     })}
                 </g>
