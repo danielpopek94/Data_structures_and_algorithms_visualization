@@ -25,7 +25,7 @@ export default function VisualizationSteps() {
     const currentStep = steps[activeStep];
 
     return (
-        <Box>
+        <Box sx={{ height: '80vh', position: 'relative', maxWidth: '500px', margin: '0 auto' }}>
             <Box>
                 <VisualizationFactory
                     nodesRows={currentStep.nodes}
@@ -36,10 +36,16 @@ export default function VisualizationSteps() {
             </Box>
             <Typography>{currentStep.description}</Typography>
             <MobileStepper
-                variant="text"
+                variant="progress"
                 steps={maxSteps}
-                position="bottom"
+                position="static"
                 activeStep={activeStep}
+                sx={{
+                    position: 'absolute',
+                    bottom: 0,
+                    left: 0,
+                    right: 0
+                }}
                 nextButton={
                     <Button size="small" onClick={handleNext} disabled={activeStep === maxSteps - 1}>
                         Next
