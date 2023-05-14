@@ -6,8 +6,6 @@ export default function getVisualizationSteps() {
     const router = useRouter();
     const path = router.query.path;
 
-    console.log(path);
-
     switch (path) {
         case undefined:
             return linkedListVisualization
