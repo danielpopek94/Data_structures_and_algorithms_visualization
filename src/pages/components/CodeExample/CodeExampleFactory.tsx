@@ -24,7 +24,7 @@ const CodeExampleFactory = () => {
     const selectedCode = selectedLanguage === 'JavaScript' ? js : python;
 
     return (
-        <>
+        <div className='max-w-2xl'>
             <div className="mb-3">
                 <Select
                     value={languageOptions.find((option) => option.label === selectedLanguage)}
@@ -42,7 +42,7 @@ const CodeExampleFactory = () => {
             <SyntaxHighlighter language={selectedLanguage} showLineNumbers="true">
                 {selectedCode}
             </SyntaxHighlighter>
-        </>
+        </div>
     );
 };
 
