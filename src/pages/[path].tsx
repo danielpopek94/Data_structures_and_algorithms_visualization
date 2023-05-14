@@ -1,11 +1,11 @@
-import { useRouter } from "next/router";
+import Home from ".";
+import { useRouter } from 'next/router';
 
 function content() {
     const router = useRouter();
-    const path = router.query.path;
-
+    console.log(router);
     return (
-        <div>{path}</div>
+        <Home />
     )
 }
 

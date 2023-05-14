@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import SyntaxHighlighter from 'react-syntax-highlighter';
 import Select from 'react-select';
 import CopyToClipboardButton from '@/pages/utilities/CopyToClipboardButton';
-import linkedlistCode from '@/pages/content/linkedList/code';
+import linkedlistCode from '@/pages/content/linked-list/code';
 
 
 const CodeExampleFactory = () => {

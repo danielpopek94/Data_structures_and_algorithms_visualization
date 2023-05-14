@@ -3,7 +3,7 @@ import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import Box from '@mui/material/Box';
 import DescriptionFactory from './DescriptionFactory';
-import Steps from './Visualization/Steps';
+import VisualizationSteps from './Visualization/VisualizationSteps';
 import CodeExampleFactory from './CodeExample/CodeExampleFactory';
 
 interface TabPanelProps {
@@ -39,7 +39,7 @@ function a11yProps(index: number) {
   };
 }
 
-export default function BasicTabs() {
+export default function ContentTabs() {
   const [value, setValue] = React.useState(0);
 
   const handleChange = (event: React.SyntheticEvent, newValue: number) => {
@@ -59,7 +59,7 @@ export default function BasicTabs() {
         <DescriptionFactory />
       </TabPanel>
       <TabPanel value={value} index={1}>
-        <Steps />
+        <VisualizationSteps />
       </TabPanel>
       <TabPanel value={value} index={2}>
         <CodeExampleFactory />

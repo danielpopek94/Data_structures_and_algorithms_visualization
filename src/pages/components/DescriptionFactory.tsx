@@ -1,4 +1,4 @@
-import LinkedListDescription from "../content/linkedList/description";
+import LinkedListDescription from "../content/linked-list/description";
 
 
 function DescriptionFactory() {

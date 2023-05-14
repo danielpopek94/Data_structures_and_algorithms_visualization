@@ -3,12 +3,14 @@ import Box from '@mui/material/Box';
 import MobileStepper from '@mui/material/MobileStepper';
 import Button from '@mui/material/Button';
 import VisualizationFactory from './VisualizationFactory';
-import { LinkedListVisualization } from '@/pages/content/linkedList/visualization';
 import { Typography } from '@mui/material';
+import getVisualizationSteps from '@/pages/utilities/Routing/getVisualizationSteps';
 
-const steps = LinkedListVisualization;
 
-export default function Steps() {
+export default function VisualizationSteps() {
+    const steps = getVisualizationSteps();
+
+
     const [activeStep, setActiveStep] = React.useState(0);
     const maxSteps = steps.length;
 

@@ -1,4 +1,4 @@
-export const LinkedListVisualization = [
+export const linkedListVisualization = [
     {
         id: 0,
         description: `"Lists" are one type of data structure, and can store multiple values.`,
@@ -313,18 +313,18 @@ export const LinkedListVisualization = [
                 pointer: true,
             },
         ],
-            [
-                {
-                    index: 0,
-                    color: 'green',
-                    text: 'Green',
-                    arrow: false,
-                    pointed: false,
-                    pointer: true,
-                    positionX: 18,
-                    positionY: 20,
-                }
-            ]
+        [
+            {
+                index: 0,
+                color: 'green',
+                text: 'Green',
+                arrow: false,
+                pointed: false,
+                pointer: true,
+                positionX: 18,
+                positionY: 20,
+            }
+        ]
         ]
     },
     {
@@ -356,18 +356,18 @@ export const LinkedListVisualization = [
                 pointer: true,
             },
         ],
-            [
-                {
-                    index: 0,
-                    color: 'green',
-                    text: 'Green',
-                    arrow: { x1: 40, y1: 31.5, x2: 0, y2: 0 },
-                    pointed: false,
-                    pointer: true,
-                    positionX: 18,
-                    positionY: 20,
-                }
-            ]]
+        [
+            {
+                index: 0,
+                color: 'green',
+                text: 'Green',
+                arrow: { x1: 40, y1: 31.5, x2: 0, y2: 0 },
+                pointed: false,
+                pointer: true,
+                positionX: 18,
+                positionY: 20,
+            }
+        ]]
     },
     {
         id: 11,
@@ -398,20 +398,20 @@ export const LinkedListVisualization = [
                 pointer: true,
             },
         ],
-            [
+        [
 
-                {
-                    index: 0,
-                    color: 'green',
-                    text: 'Green',
-                    arrow: { x1: 40, y1: 31.5, x2: 0, y2: 0 },
-                    pointed: false,
-                    pointer: true,
-                    positionX: 18,
-                    positionY: 20,
-                }
+            {
+                index: 0,
+                color: 'green',
+                text: 'Green',
+                arrow: { x1: 40, y1: 31.5, x2: 0, y2: 0 },
+                pointed: false,
+                pointer: true,
+                positionX: 18,
+                positionY: 20,
+            }
 
-            ]]
+        ]]
     },
     {
         id: 12,

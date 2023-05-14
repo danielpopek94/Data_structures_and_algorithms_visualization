@@ -1,5 +1,5 @@
 import { Inter } from 'next/font/google'
-import Tabs from './components/Tabs'
+import ContentTabs from './components/ContentTabs'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -27,7 +27,7 @@ export default function Home() {
           </ul>
         </nav>
         <div className='content w-5/6'>
-          <Tabs />
+          <ContentTabs />
         </div>
       </main>
     </>
