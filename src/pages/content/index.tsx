@@ -1,6 +1,6 @@
 import ContentTabs from '../components/ContentTabs'
 
-export default function contentPage() {
+export default function ContentPage() {
     return (
         <>
             <header>

@@ -1,23 +1,17 @@
 export const arrayVisualization = [
     {
         id: 0,
-        description: `"Lists" are one type of data structure, and can store multiple values.`,
+        description: `"Arrays" are one type of data structure, and can store multiple values.`,
         nodes: [[
             {
                 index: 0,
-                color: 'yellow',
+                color: 'blue',
                 text: 'Blue',
-                arrow: true,
-                pointed: false,
-                pointer: true,
-
             },
             {
                 index: 1,
                 color: 'orange',
                 text: 'Orange',
-                arrow: true,
-                pointed: false,
                 pointer: true,
             },
             {

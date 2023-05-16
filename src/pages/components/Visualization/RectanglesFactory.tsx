@@ -28,16 +28,6 @@ const Rectangle = ({
         y2: 0,
     }
 
-    if (orientation === 'row') {
-        x = nodeIndex * (width + gap) + positionX;
-        y = 20 + positionY;
-        innerTextX = x;
-
-        arrowPosition.x1 = arrow.x1 ? arrow.x1 : x + width + gap - 1.5;
-        arrowPosition.y1 = arrow.y1 ? arrow.y1 : y + height / 2;
-        arrowPosition.x2 = arrow.x2 ? arrow.x2 : x + width - 1.5;
-        arrowPosition.y2 = arrow.y2 ? arrow.y2 : y + height / 2;
-    }
     if (orientation === 'column') {
         x = 35 + positionX;
         y = nodeIndex * (height + gap) + positionY;
@@ -49,7 +39,17 @@ const Rectangle = ({
         arrowPosition.y1 = arrow.y1 ? arrow.y1 : y + height + gap - 1.5;
         arrowPosition.x2 = arrow.x2 ? arrow.x2 : x + width / 2;
         arrowPosition.y2 = arrow.y2 ? arrow.y2 : y + height;
+    } else {
+        x = nodeIndex * (width + gap) + positionX;
+        y = 20 + positionY;
+        innerTextX = pointer ? x : x + 2;
+
+        arrowPosition.x1 = arrow.x1 ? arrow.x1 : x + width + gap - 1.5;
+        arrowPosition.y1 = arrow.y1 ? arrow.y1 : y + height / 2;
+        arrowPosition.x2 = arrow.x2 ? arrow.x2 : x + width - 1.5;
+        arrowPosition.y2 = arrow.y2 ? arrow.y2 : y + height / 2;
     }
+
 
     return (
         <g>
