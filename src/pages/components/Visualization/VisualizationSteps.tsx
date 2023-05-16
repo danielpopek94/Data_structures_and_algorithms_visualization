@@ -59,7 +59,8 @@ export default function VisualizationSteps() {
                     orientation={currentStep.orientation}
                 />
             </Box>
-            <Typography>{currentStep.description}</Typography>
+            <Typography>{`Current step:${currentStep.id}
+            ${currentStep.description}`}</Typography>
             <MobileStepper
                 variant="progress"
                 steps={maxSteps}
