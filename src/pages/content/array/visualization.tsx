@@ -73,61 +73,58 @@ export const arrayVisualization = [
     },
     {
         id: 3,
-        description: `Data is stored sequentially in memory in consecutive locations.`,
-        comment: 'Memory',
+        description: `Because the're stored in consecutive locations, memory addresses can be calculated using their indices, allowing for random access of data.`,
+        comment: 'Random Access',
         nodeSize: 3,
-        orientation: 'column',
         nodes: [[
             {
                 index: 0,
                 color: 'orange',
                 text: 'Orange',
+                label: 'a[0]',
             },
             {
                 index: 1,
                 color: 'blue',
                 text: 'Blue',
+                label: 'a[1]',
             },
             {
                 index: 2,
                 color: 'red',
                 text: 'Red',
-
+                label: 'a[2]',
             }
         ],
         ]
     },
     {
         id: 4,
-        description: `Because data is stored in different locations, each piece of data can only be accessed through the pointer that precedes it.`,
-        comment: 'Sequential Access',
+        description: `Because the're stored in consecutive locations, memory addresses can be calculated using their indices, allowing for random access of data.`,
+        comment: 'Random Access',
+        nodeSize: 3,
         nodes: [[
             {
                 index: 0,
-                color: 'blue',
-                text: 'Blue',
-                arrow: true,
-                pointed: false,
-                pointer: true,
-                innerBorder: true,
+                color: 'orange',
+                text: 'Orange',
+                label: 'a[0]',
             },
             {
                 index: 1,
-                color: 'orange',
-                text: 'Orange',
-                arrow: true,
-                pointed: false,
-                pointer: true,
+                color: 'blue',
+                text: 'Blue',
+                label: 'a[1]',
             },
             {
                 index: 2,
                 color: 'red',
                 text: 'Red',
-                arrow: false,
-                pointed: false,
-                pointer: true,
-            },
-        ]]
+                label: 'a[2]',
+                innerBorder: true,
+            }
+        ],
+        ]
     },
     {
         id: 5,

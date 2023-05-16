@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import * as d3 from "d3";
 
-const LabelAbove = ({ x, y, width, height, text }) => {
+const LabelAbove = ({ x, y, width, height, text, selected }) => {
     const ref = useRef();
 
     useEffect(() => {
@@ -14,7 +14,7 @@ const LabelAbove = ({ x, y, width, height, text }) => {
             .attr("text-anchor", "middle")
             .attr("dominant-baseline", "central")
             .attr("font-size", `${width / 4}px`)
-            .attr("fill", "black")
+            .attr("fill", selected ? "red" : "black")
             .text(text);
     }, [x, y, width, height, text]);
 

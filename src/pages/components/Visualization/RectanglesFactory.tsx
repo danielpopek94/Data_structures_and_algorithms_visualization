@@ -90,17 +90,19 @@ const Rectangle = ({
                 <InnerBorder
                 x={x}
                 y={y}
-                    width={width}
-                    height={height}
+                width={width}
+                height={height}
+                pointer={pointer}
                 />
             }
             {label &&
                 <LabelAbove
-                    x={innerTextX}
-                    y={y}
-                    width={width}
-                    height={height}
-                    text={label}
+                x={innerTextX}
+                y={y}
+                width={width}
+                height={height}
+                text={label}
+                selected={innerBorder}
                 />}
 
         </g>
