@@ -21,8 +21,8 @@ const Rectangle = ({
 }) => {
     const gap = 10;
     const width = (100 - gap * nodeSize) / nodeSize;
-    const height = width / 2.5;
-    let x, y, innerTextX;
+    const height = width / 2;
+    let x, y;
     const arrowPosition = {
         x1: 0,
         y1: 0,
@@ -35,7 +35,6 @@ const Rectangle = ({
         y = nodeIndex * (height + gap) + positionY;
         pointer = false;
         pointed = false;
-        innerTextX = x + 2;
 
         arrowPosition.x1 = arrow.x1 ? arrow.x1 : x + width / 2;
         arrowPosition.y1 = arrow.y1 ? arrow.y1 : y + height + gap - 1.5;
@@ -44,13 +43,21 @@ const Rectangle = ({
     } else {
         x = nodeIndex * (width + gap) + positionX;
         y = 20 + positionY;
-        innerTextX = pointer ? x : x + 2;
 
         arrowPosition.x1 = arrow.x1 ? arrow.x1 : x + width + gap - 1.5;
         arrowPosition.y1 = arrow.y1 ? arrow.y1 : y + height / 2;
         arrowPosition.x2 = arrow.x2 ? arrow.x2 : x + width - 1.5;
         arrowPosition.y2 = arrow.y2 ? arrow.y2 : y + height / 2;
     }
+
+    let innerTextX = x;
+
+    if (pointer) {
+        const pointerSize = width / 5;
+
+        innerTextX = x - pointerSize / 2;
+    }
+
     return (
         <g>
             <MainRectangle
@@ -62,11 +69,11 @@ const Rectangle = ({
             />
             {pointer &&
                 <Pointer
-                    x={x}
-                    y={y}
-                    width={width}
-                    height={height}
-                    pointed={pointed}
+                x={x}
+                y={y}
+                width={width}
+                height={height}
+                pointed={pointed}
                 />
             }
             <InnerText
@@ -95,7 +102,7 @@ const Rectangle = ({
             }
             {label &&
                 <LabelAbove
-                x={innerTextX}
+                x={x}
                 y={y}
                 width={width}
                 height={height}
