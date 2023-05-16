@@ -5,6 +5,7 @@ import Button from '@mui/material/Button';
 import VisualizationFactory from './VisualizationFactory';
 import { Typography } from '@mui/material';
 import getVisualizationSteps from '@/pages/utilities/Routing/getVisualizationSteps';
+import { useEffect } from 'react';
 
 
 export default function VisualizationSteps() {
@@ -25,6 +26,26 @@ export default function VisualizationSteps() {
     const handleGoToFirstStep = () => {
         setActiveStep(0);
     };
+
+    useEffect(() => {
+        const handleKeyDown = (event) => {
+            switch (event.key) {
+                case 'ArrowLeft':
+                    activeStep > 0 && handleBack();
+                    break;
+                case 'ArrowRight':
+                    activeStep < maxSteps - 1 && handleNext();
+                    break;
+                default:
+                    break;
+            }
+        };
+
+        window.addEventListener('keydown', handleKeyDown);
+        return () => {
+            window.removeEventListener('keydown', handleKeyDown);
+        };
+    }, [activeStep]);
 
     const currentStep = steps[activeStep];
 
