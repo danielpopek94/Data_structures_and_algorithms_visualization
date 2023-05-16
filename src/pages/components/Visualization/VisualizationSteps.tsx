@@ -22,6 +22,10 @@ export default function VisualizationSteps() {
         setActiveStep((prevActiveStep) => prevActiveStep - 1);
     };
 
+    const handleGoToFirstStep = () => {
+        setActiveStep(0);
+    };
+
     const currentStep = steps[activeStep];
 
     return (
@@ -52,9 +56,14 @@ export default function VisualizationSteps() {
                     </Button>
                 }
                 backButton={
-                    <Button size="small" onClick={handleBack} disabled={activeStep === 0}>
-                        Previous
-                    </Button>
+                    <>
+                        <Button size="small" onClick={handleGoToFirstStep} disabled={activeStep === 0}>
+                            {'||<'}
+                        </Button>
+                        <Button size="small" onClick={handleBack} disabled={activeStep === 0}>
+                            Previous
+                        </Button>
+                    </>
                 }
             />
         </Box>
