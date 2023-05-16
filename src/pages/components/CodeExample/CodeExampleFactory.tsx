@@ -2,12 +2,12 @@ import React, { useState } from 'react';
 import SyntaxHighlighter from 'react-syntax-highlighter';
 import Select from 'react-select';
 import CopyToClipboardButton from '@/pages/utilities/CopyToClipboardButton';
-import linkedlistCode from '@/pages/content/linked-list/code';
+import getCodeExample from '@/pages/utilities/Routing/getCodeExample';
 
 
 const CodeExampleFactory = () => {
 
-    const currentCode = linkedlistCode;
+    const currentCode = getCodeExample();
     const { python, js } = currentCode;
 
     const [selectedLanguage, setSelectedLanguage] = useState('JavaScript');
@@ -18,6 +18,7 @@ const CodeExampleFactory = () => {
     ];
 
     const handleLanguageChange = (selectedOption) => {
+        console.log(selectedOption);
         setSelectedLanguage(selectedOption.label);
     };
 

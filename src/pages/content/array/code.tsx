@@ -1,36 +1,6 @@
-const linkedlistCode = {
-    codeJs: `const list = {
-        head: {
-            value: 6
-            next: {
-                value: 10                                             
-                next: {
-                    value: 12
-                    next: {
-                        value: 3
-                        next: null	
-                        }
-                    }
-                }
-            }
-        }
-    };`,
-    codePython: `linked_list = {
-        "head": {
-            "value": 6,
-            "next": {
-                "value": 10,
-                "next": {
-                    "value": 12,
-                    "next": {
-                        "value": 3,
-                        "next": None
-                    }
-                }
-            }
-        }
-    }
-    `
+const arrayCode = {
+    js: `const array = [6, "red", true, 3];`,
+    python: `array = [6, 'red', True, 3]`
 };
 
-export default linkedlistCode
+export default arrayCode
