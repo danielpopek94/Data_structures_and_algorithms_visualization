@@ -3,6 +3,7 @@ import Pointer from "@/pages/utilities/Visualization/Pointer";
 import InnerText from "@/pages/utilities/Visualization/InnerText";
 import Arrow from "@/pages/utilities/Visualization/Arrow";
 import InnerBorder from "./InnerBorder";
+import LabelAbove from "@/pages/utilities/Visualization/LabelAbove";
 
 const Rectangle = ({
     nodeSize = 3,
@@ -15,7 +16,8 @@ const Rectangle = ({
     innerBorder,
     positionX = 1,
     positionY = 1,
-    orientation = 'row'
+    orientation = 'row',
+    label,
 }) => {
     const gap = 10;
     const width = (100 - gap * nodeSize) / nodeSize;
@@ -50,7 +52,7 @@ const Rectangle = ({
         arrowPosition.y2 = arrow.y2 ? arrow.y2 : y + height / 2;
     }
 
-
+    console.log(label);
     return (
         <g>
             <MainRectangle
@@ -92,6 +94,14 @@ const Rectangle = ({
                     height={height}
                 />
             }
+            {label &&
+                <LabelAbove
+                    x={innerTextX}
+                    y={y}
+                    width={width}
+                    height={height}
+                    text={label}
+                />}
 
         </g>
     )

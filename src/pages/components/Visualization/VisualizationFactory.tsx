@@ -31,6 +31,7 @@ const VisualizationFactory = ({
                                             positionX={node.positionX}
                                             positionY={node.positionY}
                                             orientation={orientation}
+                                            label={node.label}
                                         />
                                     ))
                                 }

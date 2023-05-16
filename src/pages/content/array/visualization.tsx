@@ -12,66 +12,55 @@ export const arrayVisualization = [
                 index: 1,
                 color: 'orange',
                 text: 'Orange',
-                pointer: true,
             },
             {
                 index: 2,
                 color: 'red',
                 text: 'Red',
-                arrow: false,
-                pointed: false,
-                pointer: true,
             },
         ]]
     },
     {
         id: 1,
-        description: `They are unique in how they pair data with "pointers", the pointers indicating the next piece of data's memory location.`,
-        comment: 'Pointer',
+        description: `Each element can be accessed through its index (a number that denotes its order within the data).`,
         nodes: [[
             {
                 index: 0,
                 color: 'blue',
                 text: 'Blue',
-                arrow: true,
-                pointed: true,
-                pointer: true,
+                label: 'a[0]',
             },
             {
                 index: 1,
                 color: 'orange',
                 text: 'Orange',
-                arrow: true,
-                pointed: true,
-                pointer: true,
+                label: 'a[1]',
             },
             {
                 index: 2,
                 color: 'red',
                 text: 'Red',
-                arrow: false,
-                pointed: true,
-                pointer: true,
+                label: 'a[2]',
             },
         ]]
     },
     {
         id: 2,
-        description: `In lists, data is stored in various disjointed locations in memory.`,
+        description: `Data is stored sequentially in memory in consecutive locations.`,
         comment: 'Memory',
         nodeSize: 3,
         orientation: 'column',
         nodes: [[
             {
                 index: 0,
-                color: 'orange',
-                text: 'Orange',
+                color: 'blue',
+                text: 'Blue',
                 pointed: true,
             },
             {
                 index: 1,
-                color: 'blue',
-                text: 'Blue',
+                color: 'orange',
+                text: 'Orange',
             },
             {
                 index: 2,
@@ -84,7 +73,7 @@ export const arrayVisualization = [
     },
     {
         id: 3,
-        description: `In lists, data is stored in various disjointed locations in memory.`,
+        description: `Data is stored sequentially in memory in consecutive locations.`,
         comment: 'Memory',
         nodeSize: 3,
         orientation: 'column',
@@ -93,22 +82,17 @@ export const arrayVisualization = [
                 index: 0,
                 color: 'orange',
                 text: 'Orange',
-                arrow: { x1: 59, y1: 38, x2: 59, y2: 10 },
-                pointed: true,
             },
             {
                 index: 1,
                 color: 'blue',
                 text: 'Blue',
-                arrow: { x1: 48, y1: 11.5, x2: 48, y2: 21 },
-                positionX: -10,
             },
             {
                 index: 2,
                 color: 'red',
                 text: 'Red',
-                arrow: false,
-                pointed: true,
+
             }
         ],
         ]
