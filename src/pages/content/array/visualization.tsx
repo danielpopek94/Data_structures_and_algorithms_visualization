@@ -296,7 +296,7 @@ export const arrayVisualization = [
             {
                 index: 3,
                 color: 'grey',
-                text: 'Red',
+                text: '<empty>',
                 label: 'a[3]',
             }
         ],
@@ -314,89 +314,352 @@ export const arrayVisualization = [
     },
     {
         id: 11,
-        description: ``,
+        description: `In order to free up the space needed for the addition, data is shifted one element at a time.`,
+        nodeSize: 4,
         nodes: [[
             {
                 index: 0,
-                color: 'blue',
-                text: 'Blue',
-                arrow: { x1: 23, y1: 38.5, x2: 0, y2: 0 },
-                pointed: false,
-                pointer: true,
+                color: 'orange',
+                text: 'Orange',
+                label: 'a[0]',
             },
             {
                 index: 1,
-                color: 'orange',
-                text: 'Orange',
-                arrow: true,
-                pointed: false,
-                pointer: true,
+                color: 'blue',
+                text: 'Blue',
+                label: 'a[1]',
             },
             {
                 index: 2,
+                color: 'grey',
+                text: '<empty>',
+                label: 'a[2]',
+            },
+            {
+                index: 3,
                 color: 'red',
                 text: 'Red',
-                arrow: false,
-                pointed: false,
-                pointer: true,
-            },
-        ],
-        [
-
-            {
-                index: 0,
-                color: 'green',
-                text: 'Green',
-                arrow: { x1: 40, y1: 31.5, x2: 0, y2: 0 },
-                pointed: false,
-                pointer: true,
-                positionX: 18,
-                positionY: 20,
+                label: 'a[3]',
             }
-
-        ]]
-    },
-    {
-        id: 12,
-        description: `This concludes the explanation of lists.`,
-        nodes: [
-            [
-                {
-                    index: 0,
-                    color: 'blue',
-                    text: 'Blue',
-                    arrow: { x1: 23, y1: 38.5, x2: 0, y2: 0 },
-                    pointed: false,
-                    pointer: true,
-                },
-                {
-                    index: 1,
-                    color: 'orange',
-                    text: 'Orange',
-                    arrow: true,
-                    pointed: false,
-                    pointer: true,
-                },
-                {
-                    index: 2,
-                    color: 'red',
-                    text: 'Red',
-                    arrow: false,
-                    pointed: false,
-                    pointer: true,
-                },
-            ],
+        ],
             [
                 {
                     index: 0,
                     color: 'green',
                     text: 'Green',
-                    arrow: { x1: 40, y1: 31.5, x2: 0, y2: 0 },
-                    pointed: false,
-                    pointer: true,
+                    arrow: false,
                     positionX: 18,
                     positionY: 20,
                 }
+            ]
+        ]
+    },
+    {
+        id: 12,
+        description: `In order to free up the space needed for the addition, data is shifted one element at a time.`,
+        nodeSize: 4,
+        nodes: [[
+            {
+                index: 0,
+                color: 'orange',
+                text: 'Orange',
+                label: 'a[0]',
+            },
+            {
+                index: 1,
+                color: 'grey',
+                text: '<empty>',
+                label: 'a[1]',
+            },
+            {
+                index: 2,
+                color: 'blue',
+                text: 'Blue',
+                label: 'a[2]',
+            },
+            {
+                index: 3,
+                color: 'red',
+                text: 'Red',
+                label: 'a[3]',
+            }
+        ],
+            [
+                {
+                    index: 0,
+                    color: 'green',
+                    text: 'Green',
+                    arrow: false,
+                    positionX: 18,
+                    positionY: 20,
+                }
+            ]
+        ]
+    },
+    {
+        id: 13,
+        description: `"Green" is added to the empty space, completing the addition.`,
+        nodeSize: 4,
+        nodes: [[
+            {
+                index: 0,
+                color: 'orange',
+                text: 'Orange',
+                label: 'a[0]',
+            },
+            {
+                index: 1,
+                color: 'green',
+                text: 'Green',
+                label: 'a[1]',
+            },
+            {
+                index: 2,
+                color: 'blue',
+                text: 'Blue',
+                label: 'a[2]',
+            },
+            {
+                index: 3,
+                color: 'red',
+                text: 'Red',
+                label: 'a[3]',
+            }
+        ]
+        ]
+    },
+    {
+        id: 14,
+        description: `Conversely, when deleting the second element...`,
+        nodeSize: 4,
+        nodes: [[
+            {
+                index: 0,
+                color: 'orange',
+                text: 'Orange',
+                label: 'a[0]',
+            },
+            {
+                index: 1,
+                color: 'green',
+                text: 'Green',
+                label: 'a[1]',
+            },
+            {
+                index: 2,
+                color: 'blue',
+                text: 'Blue',
+                label: 'a[2]',
+            },
+            {
+                index: 3,
+                color: 'red',
+                text: 'Red',
+                label: 'a[3]',
+            }
+        ]
+        ]
+    },
+    {
+        id: 15,
+        description: `we first delete the element...`,
+        nodeSize: 4,
+        nodes: [
+            [
+                {
+                    index: 0,
+                    color: 'green',
+                    text: 'Green',
+                    label: 'a[0]',
+                    positionX: 18,
+                    positionY: -18,
+                },
+            ],
+            [
+                {
+                    index: 0,
+                    color: 'orange',
+                    text: 'Orange',
+                    label: 'a[0]',
+                },
+                {
+                    index: 1,
+                    color: 'grey',
+                    text: '<empty>',
+                    label: 'a[1]',
+                },
+                {
+                    index: 2,
+                    color: 'blue',
+                    text: 'Blue',
+                    label: 'a[2]',
+                },
+                {
+                    index: 3,
+                    color: 'red',
+                    text: 'Red',
+                    label: 'a[3]',
+                }
+            ]
+        ]
+    },
+    {
+        id: 16,
+        description: `then fill in the empty space by shifting the data one element at a time.`,
+        nodeSize: 4,
+        nodes: [
+            [
+                {
+                    index: 0,
+                    color: 'green',
+                    text: 'Green',
+                    label: 'a[0]',
+                    positionX: 18,
+                    positionY: -18,
+                },
+            ],
+            [
+                {
+                    index: 0,
+                    color: 'orange',
+                    text: 'Orange',
+                    label: 'a[0]',
+                },
+                {
+                    index: 1,
+                    color: 'blue',
+                    text: 'Blue',
+                    label: 'a[1]',
+                },
+                {
+                    index: 2,
+                    color: 'grey',
+                    text: '<empty>',
+                    label: 'a[2]',
+                },
+                {
+                    index: 3,
+                    color: 'red',
+                    text: 'Red',
+                    label: 'a[3]',
+                }
+            ]
+        ]
+    },
+    {
+        id: 17,
+        description: `then fill in the empty space by shifting the data one element at a time.`,
+        nodeSize: 4,
+        nodes: [
+            [
+                {
+                    index: 0,
+                    color: 'green',
+                    text: 'Green',
+                    label: 'a[0]',
+                    positionX: 18,
+                    positionY: -18,
+                },
+            ],
+            [
+                {
+                    index: 0,
+                    color: 'orange',
+                    text: 'Orange',
+                    label: 'a[0]',
+                },
+                {
+                    index: 1,
+                    color: 'blue',
+                    text: 'Blue',
+                    label: 'a[1]',
+                },
+                {
+                    index: 2,
+                    color: 'red',
+                    text: 'Red',
+                    label: 'a[2]',
+                },
+                {
+                    index: 3,
+                    color: 'grey',
+                    text: '<empty>',
+                    label: 'a[3]',
+                }
+            ]
+        ]
+    },
+    {
+        id: 18,
+        description: `Finally, the extra space is deleted, completing the deletion.`,
+        nodeSize: 4,
+        nodes: [
+            [
+                {
+                    index: 0,
+                    color: 'green',
+                    text: 'Green',
+                    label: 'a[0]',
+                    positionX: 18,
+                    positionY: -18,
+                },
+            ],
+            [
+                {
+                    index: 0,
+                    color: 'orange',
+                    text: 'Orange',
+                    label: 'a[0]',
+                },
+                {
+                    index: 1,
+                    color: 'blue',
+                    text: 'Blue',
+                    label: 'a[1]',
+                },
+                {
+                    index: 2,
+                    color: 'red',
+                    text: 'Red',
+                    label: 'a[2]',
+                },
+            ]
+        ]
+    },
+    {
+        id: 19,
+        description: `This concludes the explanation of arrays.`,
+        nodeSize: 4,
+        nodes: [
+            [
+                {
+                    index: 0,
+                    color: 'green',
+                    text: 'Green',
+                    label: 'a[0]',
+                    positionX: 18,
+                    positionY: -18,
+                },
+            ],
+            [
+                {
+                    index: 0,
+                    color: 'orange',
+                    text: 'Orange',
+                    label: 'a[0]',
+                },
+                {
+                    index: 1,
+                    color: 'blue',
+                    text: 'Blue',
+                    label: 'a[1]',
+                },
+                {
+                    index: 2,
+                    color: 'red',
+                    text: 'Red',
+                    label: 'a[2]',
+                },
             ]
         ]
     },

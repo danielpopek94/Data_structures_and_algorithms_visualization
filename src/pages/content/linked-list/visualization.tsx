@@ -99,14 +99,14 @@ export const linkedListVisualization = [
                 index: 0,
                 color: 'orange',
                 text: 'Orange',
-                arrow: { x1: 59, y1: 38, x2: 59, y2: 10 },
+                arrow: { x1: 59, y1: 43, x2: 59, y2: 12.5 },
                 pointed: true,
             },
             {
                 index: 1,
                 color: 'blue',
                 text: 'Blue',
-                arrow: { x1: 48, y1: 11.5, x2: 48, y2: 21 },
+                arrow: { x1: 48, y1: 14, x2: 48, y2: 23 },
                 positionX: -10,
             },
             {
