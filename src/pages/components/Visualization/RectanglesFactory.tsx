@@ -51,8 +51,6 @@ const Rectangle = ({
         arrowPosition.x2 = arrow.x2 ? arrow.x2 : x + width - 1.5;
         arrowPosition.y2 = arrow.y2 ? arrow.y2 : y + height / 2;
     }
-
-    console.log(label);
     return (
         <g>
             <MainRectangle

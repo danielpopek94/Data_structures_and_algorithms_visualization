@@ -16,7 +16,7 @@ const LabelAbove = ({ x, y, width, height, text, selected }) => {
             .attr("font-size", `${width / 4}px`)
             .attr("fill", selected ? "red" : "black")
             .text(text);
-    }, [x, y, width, height, text]);
+    }, [x, y, width, height, text, selected]);
 
     return <g ref={ref}></g>;
 };
