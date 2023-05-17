@@ -7,7 +7,6 @@ export default function getCodeExample() {
     const router = useRouter();
     const path = router.query.path;
 
-    console.log(path);
     switch (path) {
         case undefined:
             return linkedlistCode
