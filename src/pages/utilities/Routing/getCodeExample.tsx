@@ -1,5 +1,6 @@
 import arrayCode from "@/pages/content/array/code";
 import linkedlistCode from "@/pages/content/linked-list/code";
+import queueCode from "@/pages/content/queue/code";
 import stackCode from "@/pages/content/stack/code";
 import { useRouter } from "next/router";
 

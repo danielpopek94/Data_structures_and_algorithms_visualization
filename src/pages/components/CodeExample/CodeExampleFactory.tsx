@@ -18,7 +18,6 @@ const CodeExampleFactory = () => {
     ];
 
     const handleLanguageChange = (selectedOption) => {
-        console.log(selectedOption);
         setSelectedLanguage(selectedOption.label);
     };
 
