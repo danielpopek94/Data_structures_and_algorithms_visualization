@@ -4,6 +4,7 @@ import InnerText from "@/pages/utilities/Visualization/InnerText";
 import Arrow from "@/pages/utilities/Visualization/Arrow";
 import InnerBorder from "./InnerBorder";
 import LabelAbove from "@/pages/utilities/Visualization/LabelAbove";
+import OuterFrame from "@/pages/utilities/Visualization/OuterFrame";
 
 const Rectangle = ({
     nodeSize = 3,
@@ -17,7 +18,8 @@ const Rectangle = ({
     positionX = 1,
     positionY = 1,
     orientation = 'row',
-    label,
+    label = false,
+    frame = false,
 }) => {
     const gap = 10;
     const width = (100 - gap * nodeSize) / nodeSize;
@@ -108,7 +110,15 @@ const Rectangle = ({
                 height={height}
                 text={label}
                 selected={innerBorder}
-                />}
+                />
+            }
+            {frame &&
+                <OuterFrame x={x} width={width} />
+            }
+
+
+
+
 
         </g>
     )

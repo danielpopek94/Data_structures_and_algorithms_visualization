@@ -57,6 +57,7 @@ export default function VisualizationSteps() {
                     comment={currentStep.comment}
                     nodeSize={currentStep.nodeSize}
                     orientation={currentStep.orientation}
+                    frame={currentStep.frame}
                 />
             </Box>
             <Typography>{`Current step:${currentStep.id}

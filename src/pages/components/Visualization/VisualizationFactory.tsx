@@ -7,6 +7,7 @@ const VisualizationFactory = ({
     comment,
     nodeSize,
     orientation,
+    frame,
 }) => {
     const ref = useRef();
     return (
@@ -32,6 +33,7 @@ const VisualizationFactory = ({
                                             positionY={node.positionY}
                                             orientation={orientation}
                                             label={node.label}
+                                            frame={frame}
                                         />
                                     ))
                                 }

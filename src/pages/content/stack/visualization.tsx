@@ -4,6 +4,7 @@ export const stackVisualization = [
         description: `"Stack" are one type of data structure.`,
         orientation: 'column',
         nodeSize: 4,
+        frame: true,
         nodes: [[
             {
                 index: 3,
@@ -17,6 +18,7 @@ export const stackVisualization = [
         description: `When adding data to a stack, the data is put into the lowest available location.`,
         orientation: 'column',
         nodeSize: 4,
+        frame: true,
         nodes: [[
             {
                 index: 3,
@@ -30,6 +32,7 @@ export const stackVisualization = [
         description: `When adding data to a stack, the data is put into the lowest available location.`,
         orientation: 'column',
         nodeSize: 4,
+        frame: true,
         comment: 'Push',
         nodes: [[
             {
@@ -49,6 +52,7 @@ export const stackVisualization = [
         description: `We use term "push" to refer to the act of adding data to a stack.`,
         orientation: 'column',
         nodeSize: 4,
+        frame: true,
         comment: 'Push',
         nodes: [[
             {
@@ -73,6 +77,7 @@ export const stackVisualization = [
         description: `When extracting data from a stack, the most recently added data is removed first.`,
         orientation: 'column',
         nodeSize: 4,
+        frame: true,
         nodes: [[
             {
                 index: 1,
@@ -96,6 +101,7 @@ export const stackVisualization = [
         description: `When extracting data from a stack, the most recently added data is removed first.`,
         orientation: 'column',
         nodeSize: 4,
+        frame: true,
         comment: 'Pop',
         nodes: [[
             {
@@ -115,6 +121,7 @@ export const stackVisualization = [
         description: `We use term "pop" to refer to the act of extracting data from a stack.`,
         orientation: 'column',
         nodeSize: 4,
+        frame: true,
         comment: 'Pop',
         nodes: [[
             {
@@ -129,6 +136,7 @@ export const stackVisualization = [
         description: `This method of extracting the most recently added data first is called "Last In First Out", or "LIFO" for short.`,
         orientation: 'column',
         nodeSize: 4,
+        frame: true,
         nodes: [[
             {
                 index: 3,
@@ -142,6 +150,7 @@ export const stackVisualization = [
         description: `This concludes the explanation of stacks.`,
         orientation: 'column',
         nodeSize: 4,
+        frame: true,
         nodes: [[
             {
                 index: 3,
