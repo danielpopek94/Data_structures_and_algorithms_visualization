@@ -1,5 +1,6 @@
 import arrayCode from "@/pages/content/array/code";
 import linkedlistCode from "@/pages/content/linked-list/code";
+import stackCode from "@/pages/content/stack/code";
 import { useRouter } from "next/router";
 
 export default function getCodeExample() {
@@ -15,9 +16,9 @@ export default function getCodeExample() {
         case "array":
             return arrayCode
         case "stack":
-            return stackVisualization
+            return stackCode
         case "queue":
-            return queueVisualization
-        default: linkedListVisualization;
+            return queueCode
+        default: linkedlistCode;
     }
 }
