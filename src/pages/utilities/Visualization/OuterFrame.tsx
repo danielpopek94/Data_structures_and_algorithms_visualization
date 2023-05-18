@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import * as d3 from "d3";
 
-const OuterFrame = ({ x, width }) => {
+const OuterFrame = ({ x, width, frame }) => {
     const ref = useRef();
 
     useEffect(() => {
@@ -29,14 +29,15 @@ const OuterFrame = ({ x, width }) => {
             .attr("fill", 'black');
 
         // Bottom border
-        svg.append("rect")
+        if (frame !== 'withoutBottom') {
+            svg.append("rect")
             .attr("x", x - width / 2)
             .attr("y", 13 + rectHeight - borderSize)
             .attr("width", rectWidth)
             .attr("height", borderSize)
             .attr("fill", 'black');
-
-    }, [x, width]);
+        }
+    }, [x, width, frame]);
 
     return <g ref={ref}></g>;
 };

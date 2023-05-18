@@ -113,13 +113,8 @@ const Rectangle = ({
                 />
             }
             {frame &&
-                <OuterFrame x={x} width={width} />
+                <OuterFrame x={x} width={width} frame={frame} />
             }
-
-
-
-
-
         </g>
     )
 };

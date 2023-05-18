@@ -1,11 +1,21 @@
 export const queueVisualization = [
     {
         id: 0,
-        description: `"Stack" are one type of data structure.`,
+        description: `"Queues" are one type of data structure.`,
         orientation: 'column',
         nodeSize: 4,
-        frame: true,
+        frame: 'withoutBottom',
         nodes: [[
+            {
+                index: 1,
+                color: 'red',
+                text: 'Red',
+            },
+            {
+                index: 2,
+                color: 'green',
+                text: 'Green',
+            },
             {
                 index: 3,
                 color: 'blue',
@@ -15,11 +25,21 @@ export const queueVisualization = [
     },
     {
         id: 1,
-        description: `When adding data to a stack, the data is put into the lowest available location.`,
+        description: `Queues are also known as "waiting lines", and as the name suggests, they can be easily imagined as a group of people waiting in line.`,
         orientation: 'column',
         nodeSize: 4,
-        frame: true,
+        frame: 'withoutBottom',
         nodes: [[
+            {
+                index: 1,
+                color: 'red',
+                text: 'Red',
+            },
+            {
+                index: 2,
+                color: 'green',
+                text: 'Green',
+            },
             {
                 index: 3,
                 color: 'blue',
@@ -29,15 +49,19 @@ export const queueVisualization = [
     },
     {
         id: 2,
-        description: `When adding data to a stack, the data is put into the lowest available location.`,
+        description: `In queues, the sooner a person lines up, the higher their priority.`,
         orientation: 'column',
         nodeSize: 4,
-        frame: true,
-        comment: 'Push',
+        frame: 'withoutBottom',
         nodes: [[
             {
+                index: 1,
+                color: 'red',
+                text: 'Red',
+            },
+            {
                 index: 2,
-                color: 'Green',
+                color: 'green',
                 text: 'Green',
             },
             {
@@ -49,22 +73,11 @@ export const queueVisualization = [
     },
     {
         id: 3,
-        description: `We use term "push" to refer to the act of adding data to a stack.`,
+        description: `When adding data to a queue, the data is placed at the end.`,
         orientation: 'column',
         nodeSize: 4,
-        frame: true,
-        comment: 'Push',
+        frame: 'withoutBottom',
         nodes: [[
-            {
-                index: 1,
-                color: 'red',
-                text: 'Red',
-            },
-            {
-                index: 2,
-                color: 'Green',
-                text: 'Green',
-            },
             {
                 index: 3,
                 color: 'blue',
@@ -74,19 +87,15 @@ export const queueVisualization = [
     },
     {
         id: 4,
-        description: `When extracting data from a stack, the most recently added data is removed first.`,
+        description: `When adding data to a queue, the data is placed at the end.`,
         orientation: 'column',
         nodeSize: 4,
-        frame: true,
+        frame: 'withoutBottom',
+        comment: 'enqueue',
         nodes: [[
             {
-                index: 1,
-                color: 'red',
-                text: 'Red',
-            },
-            {
                 index: 2,
-                color: 'Green',
+                color: 'green',
                 text: 'Green',
             },
             {
@@ -98,15 +107,20 @@ export const queueVisualization = [
     },
     {
         id: 5,
-        description: `When extracting data from a stack, the most recently added data is removed first.`,
+        description: `We use term "enqueue", to refer to the act of adding data to a queue.`,
         orientation: 'column',
         nodeSize: 4,
-        frame: true,
-        comment: 'Pop',
+        frame: 'withoutBottom',
+        comment: 'enqueue',
         nodes: [[
             {
+                index: 1,
+                color: 'red',
+                text: 'Red',
+            },
+            {
                 index: 2,
-                color: 'Green',
+                color: 'green',
                 text: 'Green',
             },
             {
@@ -118,12 +132,22 @@ export const queueVisualization = [
     },
     {
         id: 6,
-        description: `We use term "pop" to refer to the act of extracting data from a stack.`,
+        description: `When extracting data from a queue, the data that's been in the queue the longest is removed first.`,
         orientation: 'column',
         nodeSize: 4,
-        frame: true,
-        comment: 'Pop',
+        frame: 'withoutBottom',
+        comment: 'enqueue',
         nodes: [[
+            {
+                index: 1,
+                color: 'red',
+                text: 'Red',
+            },
+            {
+                index: 2,
+                color: 'green',
+                text: 'Green',
+            },
             {
                 index: 3,
                 color: 'blue',
@@ -133,29 +157,66 @@ export const queueVisualization = [
     },
     {
         id: 7,
-        description: `This method of extracting the most recently added data first is called "Last In First Out", or "LIFO" for short.`,
+        description: `When extracting data from a queue, the data that's been in the queue the longest is removed first`,
         orientation: 'column',
         nodeSize: 4,
-        frame: true,
+        frame: 'withoutBottom',
+        comment: 'dequeue',
         nodes: [[
             {
+                index: 2,
+                color: 'red',
+                text: 'Red',
+            },
+            {
                 index: 3,
-                color: 'blue',
-                text: 'Blue',
+                color: 'green',
+                text: 'Green',
             },
         ]]
     },
     {
         id: 8,
-        description: `This concludes the explanation of stacks.`,
+        description: `We use term "dequeue" to refer to the act of extracting data from a queue.`,
         orientation: 'column',
         nodeSize: 4,
-        frame: true,
+        frame: 'withoutBottom',
+        comment: 'dequeue',
         nodes: [[
             {
                 index: 3,
-                color: 'blue',
-                text: 'Blue',
+                color: 'red',
+                text: 'Red',
+            },
+        ]]
+    },
+    {
+        id: 9,
+        description: `This method of extracting the initially added data first is called "First In First Out", or "FIFO" for short.`,
+        orientation: 'column',
+        nodeSize: 4,
+        frame: 'withoutBottom',
+        comment: 'dequeue',
+        nodes: [[
+            {
+                index: 3,
+                color: 'red',
+                text: 'Red',
+            },
+        ]]
+    },
+    {
+        id: 10,
+        description: `This concludes the explanation of queues.`,
+        orientation: 'column',
+        nodeSize: 4,
+        frame: 'withoutBottom',
+        comment: 'dequeue',
+        nodes: [[
+            {
+                index: 3,
+                color: 'red',
+                text: 'Red',
             },
         ]]
     },
