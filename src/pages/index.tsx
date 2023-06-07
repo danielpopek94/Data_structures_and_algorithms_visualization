@@ -27,7 +27,7 @@ export default function Home() {
           <div className="content">
             <a href="/linked-list" className="content__item-link">
               <div className="content__item">
-                <img className="content__image" src="http://placehold.it/300x200" />
+                <img className="content__image" src="/Images/linked-list-preview.jpg" />
                 <div className="content__info-container">
                   <p>LINKED LIST</p>
                 </div>
@@ -36,7 +36,7 @@ export default function Home() {
 
             <a href="/array" className="content__item-link">
               <div className="content__item">
-                <img className="content__image" src="http://placehold.it/300x200" />
+                <img className="content__image" src="/Images/array-preview.jpg" />
                 <div className="content__info-container">
                   <p>ARRAY</p>
                 </div>
@@ -45,7 +45,7 @@ export default function Home() {
 
             <a href="/stack" className="content__item-link">
               <div className="content__item">
-                <img className="content__image" src="http://placehold.it/300x200" />
+                <img className="content__image" src="/Images/stack-preview.jpg" />
                 <div className="content__info-container">
                   <p>STACK</p>
                 </div>
@@ -54,7 +54,7 @@ export default function Home() {
 
             <a href="/queue" className="content__item-link">
               <div className="content__item">
-                <img className="content__image" src="http://placehold.it/300x200" />
+                <img className="content__image" src="/Images/queue-preview.jpg" />
                 <div className="content__info-container">
                   <p>QUEUE</p>
                 </div>
@@ -63,7 +63,9 @@ export default function Home() {
           </div>
         </div>
       </main>
-      <footer className='mt-10'></footer>
+      <footer className='mt-10'>
+        <div style={{ height: '30vh' }}></div>
+      </footer >
     </>
   )
 }
