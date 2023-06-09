@@ -6,6 +6,16 @@ import InnerBorder from "./InnerBorder";
 import LabelAbove from "@/pages/utilities/Visualization/LabelAbove";
 import OuterFrame from "@/pages/utilities/Visualization/OuterFrame";
 
+import Node from "@/types/Node";
+
+interface Props extends Node {
+    nodeIndex: number
+    orientation?: string
+    label?: string
+    frame?: string
+
+}
+
 const Rectangle = ({
     nodeSize = 3,
     nodeIndex,
@@ -18,9 +28,9 @@ const Rectangle = ({
     positionX = 1,
     positionY = 1,
     orientation = 'row',
-    label = false,
-    frame = false,
-}) => {
+    label = '',
+    frame = '',
+}: Props) => {
     const gap = 10;
     const width = (100 - gap * nodeSize) / nodeSize;
     const height = width / 2;

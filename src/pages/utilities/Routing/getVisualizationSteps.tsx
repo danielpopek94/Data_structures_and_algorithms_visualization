@@ -21,4 +21,6 @@ export default function getVisualizationSteps() {
             return queueVisualization
         default: linkedListVisualization;
     }
+
+    return linkedListVisualization;
 }

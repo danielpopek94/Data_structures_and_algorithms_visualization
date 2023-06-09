@@ -1,6 +1,12 @@
 import React, { useRef } from "react";
 import Rectangle from "./RectanglesFactory";
 import CommentLabel from "./CommentLabel";
+import Step from "@/types/Step";
+import Node from "@/types/Node";
+
+interface Props extends Partial<Step> {
+    nodesRows: Node[][];
+}
 
 const VisualizationFactory = ({
     nodesRows,
@@ -8,7 +14,7 @@ const VisualizationFactory = ({
     nodeSize,
     orientation,
     frame,
-}) => {
+}: Props) => {
     const ref = useRef();
     return (
         <div className="flex justify-center">
@@ -17,26 +23,24 @@ const VisualizationFactory = ({
                     {nodesRows.map((nodes, outerIndex) => {
                         return (
                             <React.Fragment key={outerIndex}>
-                                {
-                                    nodes.map(node => (
-                                        <Rectangle
-                                            nodeSize={nodeSize}
-                                            nodeIndex={node.index}
-                                            color={node.color}
-                                            text={node.text}
-                                            key={node.index}
-                                            arrow={node.arrow}
-                                            pointed={node.pointed}
-                                            pointer={node.pointer}
-                                            innerBorder={node.innerBorder}
-                                            positionX={node.positionX}
-                                            positionY={node.positionY}
-                                            orientation={orientation}
-                                            label={node.label}
-                                            frame={frame}
-                                        />
-                                    ))
-                                }
+                                {nodes.map(node => (
+                                    <Rectangle
+                                        nodeSize={nodeSize}
+                                        nodeIndex={node.index}
+                                        color={node.color}
+                                        text={node.text}
+                                        key={node.index}
+                                        arrow={node.arrow}
+                                        pointed={node.pointed}
+                                        pointer={node.pointer}
+                                        innerBorder={node.innerBorder}
+                                        positionX={node.positionX}
+                                        positionY={node.positionY}
+                                        orientation={orientation}
+                                        label={node.label}
+                                        frame={frame}
+                                    />
+                                ))}
                             </React.Fragment>
                         )
                     })}

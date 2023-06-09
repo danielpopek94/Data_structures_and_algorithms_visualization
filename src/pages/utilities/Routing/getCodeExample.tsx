@@ -21,4 +21,6 @@ export default function getCodeExample() {
             return queueCode
         default: linkedlistCode;
     }
+
+    return linkedlistCode;
 }

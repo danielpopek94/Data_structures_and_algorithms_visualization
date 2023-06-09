@@ -5,15 +5,14 @@ import Button from '@mui/material/Button';
 import VisualizationFactory from './VisualizationFactory';
 import { Typography } from '@mui/material';
 import getVisualizationSteps from '@/pages/utilities/Routing/getVisualizationSteps';
-import { useEffect } from 'react';
+import Step from '@/types/Step';
 
 
 export default function VisualizationSteps() {
-    const steps = getVisualizationSteps();
-
+    const steps: Step[] = getVisualizationSteps();
 
     const [activeStep, setActiveStep] = React.useState(0);
-    const maxSteps = steps.length;
+    const maxSteps = steps?.length || 0;
 
     const handleNext = () => {
         setActiveStep((prevActiveStep) => prevActiveStep + 1);
@@ -27,30 +26,27 @@ export default function VisualizationSteps() {
         setActiveStep(0);
     };
 
-    useEffect(() => {
-        const handleKeyDown = (event) => {
-            switch (event.key) {
-                case 'ArrowLeft':
-                    activeStep > 0 && handleBack();
-                    break;
-                case 'ArrowRight':
-                    activeStep < maxSteps - 1 && handleNext();
-                    break;
-                default:
-                    break;
-            }
-        };
+    const handleKeyDown = (event: React.KeyboardEvent<HTMLDivElement>) => {
+        console.log(event);
+        switch (event.key) {
+            case 'ArrowLeft':
+                activeStep > 0 && handleBack();
+                break;
+            case 'ArrowRight':
+                activeStep < maxSteps - 1 && handleNext();
+                break;
+            default:
+                break;
+        }
+    };
 
-        window.addEventListener('keydown', handleKeyDown);
-        return () => {
-            window.removeEventListener('keydown', handleKeyDown);
-        };
-    }, [activeStep]);
-
-    const currentStep = steps[activeStep];
+    const currentStep: Step = steps[activeStep];
 
     return (
-        <Box sx={{ height: '80vh', position: 'relative', maxWidth: '500px', margin: '0 auto' }}>
+        <Box sx={{ height: '80vh', position: 'relative', maxWidth: '500px', margin: '0 auto' }}
+            onKeyDown={handleKeyDown}
+            tabIndex={0}
+        >
             <Box>
                 <VisualizationFactory
                     nodesRows={currentStep.nodes}
@@ -74,16 +70,28 @@ export default function VisualizationSteps() {
                     right: 0
                 }}
                 nextButton={
-                    <Button size="small" onClick={handleNext} disabled={activeStep === maxSteps - 1}>
+                    <Button
+                        size="small"
+                        onClick={handleNext}
+                        disabled={activeStep === maxSteps - 1}
+                    >
                         Next
                     </Button>
                 }
                 backButton={
                     <>
-                        <Button size="small" onClick={handleGoToFirstStep} disabled={activeStep === 0}>
+                        <Button
+                            size="small"
+                            onClick={handleGoToFirstStep}
+                            disabled={activeStep === 0}
+                        >
                             {'||<'}
                         </Button>
-                        <Button size="small" onClick={handleBack} disabled={activeStep === 0}>
+                        <Button
+                            size="small"
+                            onClick={handleBack}
+                            disabled={activeStep === 0}
+                        >
                             Previous
                         </Button>
                     </>
