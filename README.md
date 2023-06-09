@@ -16,13 +16,15 @@ add folders here
 
 ## 2. Libraries & Frameworks
 
-| Name                                            | Description                                                            |
-| ----------------------------------------------- | ---------------------------------------------------------------------- |
-| [NextJS](https://nextjs.org/)                   | The React Framework for Production.                                    |
-| [ReactJS](https://reactjs.org/)                 | A JavaScript library for building user interfaces.                     |
-| Material Ui                                     |                                                                        |
-| D3.js                                           |                                                                        |
-| add more here                                   |                                                                        |
+| Name                                                                               | Description                                                            |
+| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------- |
+| [NextJS](https://nextjs.org/)                                                      | The React Framework for Production.                                    |
+| [ReactJS](https://reactjs.org/)                                                    | A JavaScript library for building user interfaces.                     |
+| [TypeScript](https://reactjs.org/)                                                 |                                                                        |
+| [Material Ui](https://mui.com/)                                                    |                                                                        |
+| [D3.js](https://d3js.org/)                                                         |                                                                        |
+| [React syntax highlighter](https://www.npmjs.com/package/react-syntax-highlighter) |                                                                        |
+| [Tailwind](https://tailwindcss.com/)                                               |                                                                        |
 
 
 ## 3. Installation & Set Up
