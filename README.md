@@ -20,11 +20,11 @@ add folders here
 | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------- |
 | [NextJS](https://nextjs.org/)                                                      | The React Framework for Production.                                    |
 | [ReactJS](https://reactjs.org/)                                                    | A JavaScript library for building user interfaces.                     |
-| [TypeScript](https://reactjs.org/)                                                 |                                                                        |
-| [Material Ui](https://mui.com/)                                                    |                                                                        |
-| [D3.js](https://d3js.org/)                                                         |                                                                        |
-| [React syntax highlighter](https://www.npmjs.com/package/react-syntax-highlighter) |                                                                        |
-| [Tailwind](https://tailwindcss.com/)                                               |                                                                        |
+| [TypeScript](https://reactjs.org/)                                                 | TypeScript is a typed superset of JS that adds static types.           |
+| [Material Ui](https://mui.com/)                                                    | React component library that implements the Material Design principles.|
+| [D3.js](https://d3js.org/)                                                         | JavaScript library for data visualization.                             |
+| [React syntax highlighter](https://www.npmjs.com/package/react-syntax-highlighter) | Lets you add syntax highlighting to code blocks or code snippets.      |
+| [Tailwind](https://tailwindcss.com/)                                               | Comprehensive set of pre-defined utility classes.                      |
 
 
 ## 3. Installation & Set Up
